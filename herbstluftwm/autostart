@@ -116,6 +116,11 @@ hc keybind $Mod-Shift-Tab   cycle_all -1
 hc keybind $Mod-c cycle
 hc keybind $Mod-i jumpto urgent
 
+# media 
+hc keybind XF86AudioLowerVolume spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+hc keybind XF86AudioRaiseVolume spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+hc keybind XF86AudioMute        spawn wpctl set-mute   @DEFAULT_AUDIO_SINK@ toggle
+
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
