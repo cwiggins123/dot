@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#requires the shell script be installed as well as lynx
+
+mkdir ~./config/ 2>/dev/null
+rm -sf ~/.config/lynx 2>/dev/null
+ln -s "$PWD" "$HOME"/.config/lynx
+ls -l ~/.config/lynx
