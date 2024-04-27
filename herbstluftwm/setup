@@ -1,5 +1,5 @@
 #!/bin/sh
-mkdir -p ~/.config/herbstluftwm
+mkdir -p "$HOME/.config/herbstluftwm"
 ln -sf "$PWD/autostart" "$HOME/.config/herbstluftwm/autostart"
 ln -sf "$PWD/panel.sh" "$HOME/.config/herbstluftwm/panel.sh"
 ln -sf "$PWD/dmenu_run_hlwm" "$HOME/.config/herbstluftwm/dmenu_run_hlwm"

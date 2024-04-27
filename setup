@@ -7,9 +7,8 @@ ln -sf "$PWD/.dir_colors" "$HOME/.dir_colors"
 ln -sf "$PWD/.inputrc" "$HOME/.inputrc"
 ln -sf "$PWD/.profile" "$HOME/.profile"
 ln -sf "$PWD/.profile" "$HOME/.bash_profile"
-ln -sd "$PWD/scripts" "$HOME/Scripts"
 
-for i in vim lynx gh git tmux docker podman iam; do
+for i in vim lynx gh git tmux docker podman iam scripts go; do
   cd $i && ./setup
   cd -
 done
