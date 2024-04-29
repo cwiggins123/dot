@@ -11,7 +11,6 @@ esac
 export MC_SKIN=modarin256-defbg
 export PATH=$PATH:/sbin/:/usr/sbin:~/go/bin/:~/.local/bin/
 export EDITOR=vim
-export TERMINAL=urxvtc-256color
 export GITUSER="$USER"
 export REPOS="$HOME/Repos"
 export GHREPOS="$REPOS/github.com/$GITUSER"
@@ -58,7 +57,12 @@ export LESS_TERMCAP_se="" # "0m"
 export LESS_TERMCAP_so="[34m" # blue
 export LESS_TERMCAP_ue="" # "0m"
 export LESS_TERMCAP_us="[4m"  # underline
- 
+
+export twitter="Elon Musk" 
+# clear screen
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
 [[ -d /.vim/spell ]] && export VIMSPELL=("$HOME/.vim/spell/*.add")
 
 # dircolors
@@ -83,7 +87,6 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=5000
 export HISTFILESIZE=10000
 
-set -o vi
 shopt -s histappend
 
 # --------------------------- smart prompt ---------------------------
@@ -149,9 +152,10 @@ alias clear='printf "\e[H\e[2J"'
 alias c='printf "\e[H\e[2J"'
 alias coin="clip '(yes|no)'"
 alias grep="pcregrep"
-alias top=bashtop
+alias top=btop
 alias iam=live
-alias neo="neo -D -c gold"
+alias fetch=fastfetch
 
 _have vim && alias vi=vim
 
+set -o vi
