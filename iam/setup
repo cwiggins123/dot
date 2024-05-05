@@ -1,3 +1,0 @@
-#!/bin/sh
-mkdir -p ~/.config/iam
-ln -fs "$PWD/config.yaml" ~/.config/iam/config.yaml
