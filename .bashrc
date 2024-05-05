@@ -6,6 +6,12 @@ case $- in
   *) return ;;
 esac
 
+
+# ---------- local utility functions
+
+_have() { type "$1" &>/dev/null; }
+_source_if() { [[ -r "$1" ]] && source "$1"; }
+
 # better compatibility and portability
 # env vars
 export MC_SKIN=modarin256-defbg
