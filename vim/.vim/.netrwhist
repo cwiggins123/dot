@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/christopher/dot/lynx/lynx'
 let g:netrw_dirhist_8='/home/christopher/.local/bin'
 let g:netrw_dirhist_7='/home/christopher/.tmux'
 let g:netrw_dirhist_6='/home/christopher/.local/bin'

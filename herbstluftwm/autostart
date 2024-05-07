@@ -123,49 +123,53 @@ hc keybind XF86AudioMute        spawn wpctl set-mute   @DEFAULT_AUDIO_SINK@ togg
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color '#222222cc'
+hc set frame_border_active_color '#0a9dffcc'
 hc set frame_border_normal_color '#101010cc'
 hc set frame_bg_normal_color '#565656aa'
-hc set frame_bg_active_color '#345F0Caa'
+hc set frame_bg_active_color '#0a9dffaa'
 hc set frame_border_width 1
 hc set show_frame_decorations 'focused_if_multiple'
 hc set frame_bg_transparent on
 hc set frame_transparent_width 5
 hc set frame_gap 4
 
-hc attr theme.title_height 15
+hc attr theme.title_height 0
 hc attr theme.title_when never
 hc attr theme.title_font 'Hack Nerd Font Mono:pixelsize=22:antialias=true'  # example using Xft
 # hc attr theme.title_font '-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
 hc attr theme.title_depth 3  # space below the title's baseline
-hc attr theme.active.color '#345F0Cef'
-hc attr theme.title_color '#ffffff'
-hc attr theme.normal.color '#323232dd'
-hc attr theme.urgent.color '#7811A1dd'
-hc attr theme.tab_color '#1F1F1Fdd'
-hc attr theme.active.tab_color '#2B4F0Add'
-hc attr theme.active.tab_outer_color '#6C8257dd'
-hc attr theme.active.tab_title_color '#ababab'
-hc attr theme.normal.title_color '#898989'
-hc attr theme.inner_width 1
+hc attr theme.active.color '#aeee00'
+hc attr theme.title_color '#1c1b1a'
+hc attr theme.normal.color '#666462dd'
+hc attr theme.urgent.color '#ff2c4bdd'
+hc attr theme.tab_color '#1c1b1add'
+hc attr theme.active.tab_color '#0a9dffdd'
+hc attr theme.active.tab_outer_color '#0a9dffdd'
+hc attr theme.active.tab_title_color '#000000'
+hc attr theme.normal.title_color '#000000'
+hc attr theme.inner_width 2
 hc attr theme.inner_color black
-hc attr theme.border_width 3
+hc attr theme.border_width 4
 hc attr theme.floating.border_width 4
-hc attr theme.floating.outer_width 1
+hc attr theme.floating.outer_width 3
 hc attr theme.floating.outer_color black
-hc attr theme.active.inner_color '#789161'
-hc attr theme.urgent.inner_color '#9A65B0'
-hc attr theme.normal.inner_color '#606060'
+hc attr theme.active.inner_color '#aeee00'
+hc attr theme.urgent.inner_color '#ff2c4b'
+hc attr theme.normal.inner_color '#666462'
+hc attr theme.active.outer_color '#1c1b1a'
+hc attr theme.normal.outer_color '#666462'
+hc attr theme.urgent_outer_color '#ff2c4b'
 # copy inner color to outer_color
-for state in active urgent normal ; do
-    hc substitute C theme.${state}.inner_color \
-        attr theme.${state}.outer_color C
-done
-hc attr theme.tiling.outer_width 1
-hc attr theme.background_color '#141414'
+#for state in active urgent normal ; do
+#    hc substitute C theme.${state}.inner_color \
+#        attr theme.${state}.outer_color C
+#done
 
-hc set window_gap 0
-hc set frame_padding 0
+hc attr theme.tiling.outer_width 2
+hc attr theme.background_color '#1c1b1a'
+
+hc set window_gap 5
+hc set frame_padding 3
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings on
 hc set mouse_recenter_gap 0
