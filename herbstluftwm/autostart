@@ -8,11 +8,6 @@ hc() {
 
 hc emit_hook reload
 
-# autostart
-!(pidof mpd) && mpd &
-!(pidof xwallpaper) && xwallpaper --zoom ~/Pictures/b9.jpg &
-!(pidof xcompmgr) && xcompmgr &
-
 # remove all existing keybindings
 hc keyunbind --all
 
@@ -20,7 +15,7 @@ hc keyunbind --all
 # if you have a super key you will be much happier with Mod set to Mod4
 Mod=Mod4    # Use alt as the main modifier
 #Mod=Mod4   # Use the super key as the main modifier
-TERMINAL=xterm
+TERMINAL=urxvtc
 
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
@@ -169,7 +164,7 @@ hc attr theme.tiling.outer_width 2
 hc attr theme.background_color '#1c1b1a'
 
 hc set window_gap 5
-hc set frame_padding 3
+hc set frame_padding 5
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings on
 hc set mouse_recenter_gap 0
@@ -204,3 +199,9 @@ for monitor in $(hc list_monitors | cut -d: -f1) ; do
     # start it on each monitor
     "$panel" "$monitor" &
 done
+
+# autostart
+spawn mpd
+spawn urxvtd
+spawn picom
+spawn xwallpaper --zoom ~/Pictures/4kmeteora.jpg

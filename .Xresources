@@ -1,13 +1,9 @@
 *.scrollBar: false
-*.faceName: Hack Nerd Font Mono:size=20:antialias=yes
-URxvt.font: xft:Hack Nerd Font Mono:size=20:antialias=yes 
-URxvt.perl-ext-common: default,selection-to-clipboard,font-size,keyboard-select,new-window,vtwheel
+*.faceName: Hack:size=20:antialias=yes
+URxvt.font: xft:Hack:size=20:antialias=yes 
+URxvt.perl-ext-common: default,font-size,keyboard-select,vtwheel
 
 URxvt.keysym.M-v: perl:keyboard-select:activate
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
-
-URxvt.keysym.C-N: perl:new-window
 
 ! X11 colors pieced together by Dmitry Medvinsky.
 ! Based on Vim colorscheme "badwolf" pieced together by Steve Losh.
@@ -44,6 +40,8 @@ URxvt.keysym.C-N: perl:new-window
 
 ! Resourses {{{
 *background:  blackgravel
+URxvt.depth: 32
+URxvt.background: [90]blackgravel
 *foreground:  plain
 *cursorColor: tardis
 *scrollColor: deepgravel
