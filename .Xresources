@@ -1,10 +1,5 @@
 *.scrollBar: false
 *.faceName: Inconsolata Nerd Font:size=20:antialias=yes
-URxvt.font: xft:Inconsolata Nerd Font Mono:size=24:antialias=yes
-URxvt.boldFont: xft:Inconsolata Nerd Font Mono:size=24:antialias=yes
-URxvt.perl-ext-common: default,font-size,keyboard-select,vtwheel
-
-URxvt.keysym.M-v: perl:keyboard-select:activate
 
 ! X11 colors pieced together by Dmitry Medvinsky.
 ! Based on Vim colorscheme "badwolf" pieced together by Steve Losh.
@@ -41,8 +36,6 @@ URxvt.keysym.M-v: perl:keyboard-select:activate
 
 ! Resourses {{{
 *background:  blackgravel
-URxvt.depth: 32
-URxvt.background: [75]blackgravel
 *foreground:  plain
 *cursorColor: tardis
 *scrollColor: deepgravel
