@@ -90,6 +90,7 @@ hc pad $monitor $panel_height
     IFS=$'\t' read -ra tags <<< "$(hc tag_status $monitor)"
     visible=true
     date=""
+    #test=""
     windowtitle=""
     while true ; do
 
@@ -129,7 +130,7 @@ hc pad $monitor $panel_height
         echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
         # small adjustments
-        right="$separator^bg() $date $separator"
+        right="$separator^bg() $date"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space..
         width=$($textwidth "$font" "$right_text_only    ")
@@ -156,6 +157,9 @@ hc pad $monitor $panel_height
                 #echo "resetting date" >&2
                 date="${cmd[@]:1}"
                 ;;
+            #test)
+            #    test="${cmd[@]:1}"
+            #    ;;
             quit_panel)
                 exit
                 ;;
