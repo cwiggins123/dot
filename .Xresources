@@ -1,7 +1,7 @@
 *.scrollBar: false
-*.faceName: Inconsolata:size=20:antialias=yes
-URxvt.font: xft:Inconsolata:size=20:antialias=yes
-URxvt.boldFont:xft:Inconsolata:size=20:size=24:antialias=yes
+*.faceName: Inconsolata Nerd Font:size=20:antialias=yes
+URxvt.font: xft:Inconsolata Nerd Font Mono:size=24:antialias=yes
+URxvt.boldFont: xft:Inconsolata Nerd Font Mono:size=24:antialias=yes
 URxvt.perl-ext-common: default,font-size,keyboard-select,vtwheel
 
 URxvt.keysym.M-v: perl:keyboard-select:activate
