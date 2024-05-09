@@ -15,7 +15,7 @@ hc keyunbind --all
 # if you have a super key you will be much happier with Mod set to Mod4
 Mod=Mod4    # Use alt as the main modifier
 #Mod=Mod4   # Use the super key as the main modifier
-TERMINAL=urxvtc
+TERMINAL=wezterm
 
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
@@ -201,7 +201,6 @@ for monitor in $(hc list_monitors | cut -d: -f1) ; do
 done
 
 # autostart
-spawn mpd
-spawn urxvtd
-spawn picom
-spawn xwallpaper --zoom ~/Pictures/4kmeteora.jpg
+!(pidof mpd) && mpd &
+!(pidof picom) && picom &
+!(pidof hsetroot) && hsetroot -cover ~/Pictures/4kmeteora.jpg &
