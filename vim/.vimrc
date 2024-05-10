@@ -1,9 +1,19 @@
 """""""""""""""""""""
 "     Vim-Plug      "
 """""""""""""""""""""
-call plug#begin()
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
-call plug#end()
+if filereadable(expand("~/.vim/autoload/plug.vim"))
+  call plug#begin()
+  Plug 'vim-pandoc/vim-pandoc'
+  Plug 'cespare/vim-toml'
+  Plug 'fatih/vim-go'
+  Plug 'airblade/vim-gitgutter'
+  call plug#end()
+  let g:go_fmt_fail_silently = 0 "let me out even with errors
+  let g:go_fmt_command = 'goimports' "autoupdate import
+  let g:go_fmt_autosave = 1
+else
+  autocmd vimleavepre *.go !gofmt -w % " backup if fatih fails
+endif
 
 " checks for vim-tiny (vi)
 if has("eval")
@@ -49,7 +59,7 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme onehalfdark 
+  colorscheme lunaperche 
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
   hi Comment guibg=NONE ctermbg=NONE
