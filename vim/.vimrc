@@ -1,3 +1,10 @@
+"""""""""""""""""""""
+"     Vim-Plug      "
+"""""""""""""""""""""
+call plug#begin()
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+call plug#end()
+
 " checks for vim-tiny (vi)
 if has("eval")
    let skip_defaults_vim = 1
@@ -41,9 +48,10 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme habamax 
+  colorscheme onehalfdark 
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
+  hi Comment guibg=NONE ctermbg=NONE
 endif
 
 """""""""""""""""""

@@ -15,7 +15,7 @@ _source_if() { [[ -r "$1" ]] && source "$1"; }
 # better compatibility and portability
 # env vars
 export MC_SKIN=modarin256-defbg
-export PATH=$PATH:/sbin/:/usr/sbin:~/go/bin/:~/.local/bin/
+export PATH=$PATH:/sbin/:/usr/sbin:~/go/bin/:~/.local/bin/:~/.local/bin/zig-linux-x86_64-0.11.0:$PATH
 export EDITOR=vim
 export GITUSER="$USER"
 export REPOS="$HOME/Repos"
