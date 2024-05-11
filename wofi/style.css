@@ -7,7 +7,7 @@
 window {
   background-color: #282c34;
   border: 3px solid #61afef;
-  border-radius: 0px;
+  border-radius: 10px;
 }
 
 #outer-box {

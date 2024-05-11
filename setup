@@ -8,7 +8,9 @@ ln -sf "$PWD/.profile" "$HOME/.profile"
 ln -sf "$PWD/.profile" "$HOME/.bash_profile"
 ln -sf "$PWD/.Xresources" "$HOME/.Xresources"
 ln -sf "$PWD/.wezterm.lua" "$HOME/.wezterm.lua"
-ln -sf "$PWD/.sway/" "$HOME/.sway/"
+#ln -sd "$PWD/.sway/" "$HOME/.sway/"
+ln -sd "$PWD/wofi/" "$HOME/.config/"
+ln -sd "$PWD/ranger/" "$HOME/.config/"
 
 for i in vim lynx git tmux docker podman scripts ; do
   cd $i && ./setup
