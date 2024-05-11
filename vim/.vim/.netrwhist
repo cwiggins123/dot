@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/christopher/.config/autostart'
 let g:netrw_dirhist_2='/home/christopher/slackware64-current'
 let g:netrw_dirhist_1='/home/christopher/.sway'
 let g:netrw_dirhist_0='/home/christopher/dot/kitty'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_7='/home/christopher/.tmux'
 let g:netrw_dirhist_6='/home/christopher/.local/bin'
 let g:netrw_dirhist_5='/home/christopher/.tmux'
 let g:netrw_dirhist_4='/usr/share/xsessions'
-let g:netrw_dirhist_3='/home/christopher/.local/bin'
