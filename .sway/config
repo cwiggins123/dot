@@ -28,7 +28,7 @@ font pango:Input Mono Regular 22
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /home/christopher/Pictures/iceland3.jpg fill
+output * bg /home/christopher/Pictures/iceland4.jpg fill
 #
 # Example configuration:
 #
@@ -66,6 +66,17 @@ output * bg /home/christopher/Pictures/iceland3.jpg fill
 ### Titlebar
 default_border pixel 4
 
+### swayfx stuff
+blur enable
+blur_passes 2
+blur_radius 2
+blur_noise 0
+blur_brightness 1
+blur_contrast 1
+blur_saturation 1
+
+corner_radius 10
+
 ### Key bindings
 #
 # Basics:
@@ -77,7 +88,7 @@ default_border pixel 4
     bindsym $mod+Shift+c kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+p exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -223,10 +234,10 @@ bar {
     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
     colors {
-        statusline #ebdbb2
-        background #3c3836
-        inactive_workspace #28282800 #282828 #928374
-        focused_workspace  #83a59800 #458588 #ebdbb2
+        statusline #dcdfe4
+        background #282c34
+        inactive_workspace #282c34 #282c34 #dcdfe4
+        focused_workspace  #61afef #282c34 #dcdfe4
     }
 }
 
