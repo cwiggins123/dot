@@ -24,7 +24,7 @@ set $term wezterm
 set $menu wofi -S run
 
 ### font stuff
-font pango:Input Mono Regular 22
+font pango:Input Mono Regular 18
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
@@ -65,6 +65,7 @@ output * bg /home/christopher/Pictures/monstera2.jpg fill
 
 ### Titlebar
 default_border pixel 4
+hide_edge_borders smart
 
 ### swayfx stuff
 blur enable
@@ -192,7 +193,9 @@ corner_radius 10
     bindsym $mod+minus scratchpad show
 
 # Gaps
-gaps inner 15
+gaps inner 8
+gaps outer 8
+smart_gaps on
 #bindsym $mod+    gaps plus  2
 #bindsym $mod+    gaps minus 2
 #bindsym $mod+    gaps toggle 
@@ -231,13 +234,17 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    #status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command i3status --config $HOME/.config/i3/i3status.conf
 
     colors {
-        statusline #d3c6aa
-        background #272e33
-        inactive_workspace #272e33 #272e33 #d3c6aa
-        focused_workspace  #7fbbb3 #272e33 #d3c6aa
+        #statusline #d3c6aa
+        statusline #ffffff
+        #background #272e33
+        background #323232
+        #inactive_workspace #272e33 #272e33 #d3c6aa
+        inactive_workspace #32323200 #32323200 #5c5c5d
+        #focused_workspace  #7fbbb3 #272e33 #d3c6aa
     }
 }
 
