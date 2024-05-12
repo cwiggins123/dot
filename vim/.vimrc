@@ -8,6 +8,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'fatih/vim-go'
   Plug 'airblade/vim-gitgutter'
   Plug 'sonph/onehalf', { 'rtp': 'vim' }
+  Plug 'sainnhe/everforest'
   call plug#end()
   let g:go_fmt_fail_silently = 0 "let me out even with errors
   let g:go_fmt_command = 'goimports' "autoupdate import
@@ -60,7 +61,7 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme onehalfdark 
+  colorscheme everforest 
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
   hi Comment guibg=NONE ctermbg=NONE

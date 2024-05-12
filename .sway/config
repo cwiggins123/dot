@@ -28,7 +28,7 @@ font pango:Input Mono Regular 22
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /home/christopher/Pictures/iceland4.jpg fill
+output * bg /home/christopher/Pictures/monstera2.jpg fill
 #
 # Example configuration:
 #
@@ -234,10 +234,10 @@ bar {
     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
 
     colors {
-        statusline #dcdfe4
-        background #282c34
-        inactive_workspace #282c34 #282c34 #dcdfe4
-        focused_workspace  #61afef #282c34 #dcdfe4
+        statusline #d3c6aa
+        background #272e33
+        inactive_workspace #272e33 #272e33 #d3c6aa
+        focused_workspace  #7fbbb3 #272e33 #d3c6aa
     }
 }
 

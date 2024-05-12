@@ -5,7 +5,8 @@ local config = {}
 if wezterm.config_builder then config = wezterm.config_builder() end 
 
 -- Settings
-config.color_scheme = "OneHalfDark"
+config.color_scheme_dirs = { "$HOME/.config/wezterm/colors" }
+config.color_scheme = "Everforest Dark (Hard)"
 config.font = wezterm.font_with_fallback({
   {family = "Input Mono", scale = 1.75 },
   {family = "Hack", scale = 1.75 },
