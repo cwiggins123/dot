@@ -161,6 +161,8 @@ alias grep="pcregrep"
 alias top=btop
 alias iam=live
 alias fetch=fastfetch
+alias suod=sudo
+alias sduo=sudo
 
 _have vim && alias vi=vim
 
