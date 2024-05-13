@@ -28,7 +28,7 @@ font pango:Input Mono Regular 18
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /home/christopher/Pictures/monstera2.jpg fill
+output * bg /home/christopher/Pictures/desert3.jpg fill
 #
 # Example configuration:
 #
