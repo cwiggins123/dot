@@ -69,14 +69,12 @@ hide_edge_borders smart
 
 ### swayfx stuff
 blur enable
-blur_passes 2
-blur_radius 2
+blur_passes 3
+blur_radius 3
 blur_noise 0
 blur_brightness 1
 blur_contrast 1
 blur_saturation 1
-
-corner_radius 10
 
 ### Key bindings
 #
@@ -230,20 +228,21 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
+    position bottom
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     #status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-    status_command i3status --config $HOME/.config/i3/i3status.conf
+    status_command i3blocks
 
     colors {
         #statusline #d3c6aa
         statusline #ffffff
+        separator  #ffffff
         #background #272e33
-        background #323232
+        background #000000
         #inactive_workspace #272e33 #272e33 #d3c6aa
-        inactive_workspace #32323200 #32323200 #5c5c5d
+        inactive_workspace #00000000 #00000000 #5c5c5d
         #focused_workspace  #7fbbb3 #272e33 #d3c6aa
     }
 }
