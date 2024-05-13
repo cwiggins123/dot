@@ -66,7 +66,6 @@ if has("syntax")
   colorscheme tokyonight
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
-  hi Comment guibg=NONE ctermbg=NONE
 endif
 
 """""""""""""""""""
