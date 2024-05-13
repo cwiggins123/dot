@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Autostart
-exec_always feh --bg-fill $HOME/Pictures/monstera2.jpg
+exec_always feh --bg-fill $HOME/Pictures/desert3.jpg
 exec_always picom 
 
 ### Variables
@@ -22,10 +22,10 @@ set $term wezterm
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_run
+set $menu bemenu-run
 
 ### font stuff
-font pango:Input Mono Regular 18
+font pango:CaskaydiaCoveNerdFontMono 18
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)

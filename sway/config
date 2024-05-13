@@ -24,7 +24,7 @@ set $term wezterm
 set $menu wofi -S run
 
 ### font stuff
-font pango:Input Mono Regular 18
+font pango:CaskaydiaCoveNerdFontMono 18
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
