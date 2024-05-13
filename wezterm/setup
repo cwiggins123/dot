@@ -1,5 +1,4 @@
 #!/bin/sh
 
 mkdir $HOME/.config/wezterm/ 2>/dev/null
-
-ln -s "$PWD" "$HOME/.config/wezterm/"
+ln -s "$PWD/wezterm.lua" "$HOME/.config/wezterm/wezterm.lua"

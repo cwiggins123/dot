@@ -7,10 +7,11 @@ ln -sf "$PWD/.inputrc" "$HOME/.inputrc"
 ln -sf "$PWD/.profile" "$HOME/.profile"
 ln -sf "$PWD/.profile" "$HOME/.bash_profile"
 ln -sf "$PWD/.Xresources" "$HOME/.Xresources"
-ln -sf "$PWD/.wezterm.lua" "$HOME/.wezterm.lua"
-#ln -sd "$PWD/.sway/" "$HOME/.sway/"
 ln -sd "$PWD/wofi/" "$HOME/.config/"
-ln -sd "$PWD/ranger/" "$HOME/.config/"
+ln -sd "$PWD/wezterm/" "$HOME/.config/"
+ln -sd "$PWD/i3/" "$HOME/.config/"
+ln -sd "$PWD/sway/" "$HOME/.config/"
+ln -sd "$PWD/i3blocks" "$HOME/.config/"
 
 for i in vim lynx git tmux docker podman scripts ; do
   cd $i && ./setup
