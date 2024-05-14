@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Autostart
-exec --no-startup-id xwallpaper --zoom $HOME/Pictures/desert3.jpg
+exec --no-startup-id xwallpaper --zoom $HOME/Pictures/hp4.png
 exec --no-startup-id xcompmgr 
 exec gentoo-pipewire-launcher 
 
@@ -242,7 +242,7 @@ bar {
         #background #272e33
         background #000000
         #inactive_workspace #272e33 #272e33 #d3c6aa
-        inactive_workspace #000000 #000000 #5c5c5d
+        inactive_workspace #222222 #222222 #6b6b6b
         #focused_workspace  #7fbbb3 #272e33 #d3c6aa
     }
 }
