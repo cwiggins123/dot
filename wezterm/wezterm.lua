@@ -7,12 +7,12 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 -- Settings
 config.color_scheme = "Desert"
 config.font = wezterm.font_with_fallback({
-  {family = "CaskaydiaCoveNerdFontMono", scale = 1.50 },
+  {family = "Jetbrains Mono", scale = 1.50 },
   {family = "Font Awesome 6 Free Regular", scale = 1.50},
   {family = "Symbola", scale = 1.50 },
 })
 config.window_background_opacity = 0.85
-config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "home"

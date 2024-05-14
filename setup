@@ -12,6 +12,7 @@ ln -sd "$PWD/wezterm/" "$HOME/.config/"
 ln -sd "$PWD/i3/" "$HOME/.config/"
 ln -sd "$PWD/sway/" "$HOME/.config/"
 ln -sd "$PWD/i3blocks" "$HOME/.config/"
+ln -sd "$PWD/picom" "$HOME/.picom"
 
 for i in vim lynx git tmux docker podman scripts ; do
   cd $i && ./setup

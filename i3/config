@@ -5,8 +5,9 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Autostart
-exec_always feh --bg-fill $HOME/Pictures/desert3.jpg
-exec_always picom 
+exec --no-startup-id xwallpaper --zoom $HOME/Pictures/desert3.jpg
+exec --no-startup-id xcompmgr 
+exec gentoo-pipewire-launcher 
 
 ### Variables
 #
@@ -25,7 +26,7 @@ set $term wezterm
 set $menu dmenu_run
 
 ### font stuff
-font pango:CaskaydiaCoveNerdFontMono 18
+font pango:Jetbrains Mono 18
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
@@ -68,21 +69,15 @@ font pango:CaskaydiaCoveNerdFontMono 18
 default_border pixel 4
 hide_edge_borders smart
 
-### swayfx stuff
-#blur enable
-#blur_passes 3
-#blur_radius 3
-#blur_noise 0
-#blur_brightness 1
-#blur_contrast 1
-#blur_saturation 1
-
 ### Key bindings
 #
 # Basics:
 #
     # Start a terminal
 bindsym $mod+Return exec $term
+
+    # Lock the screen
+bindsym $mod+Shift+Mod1+l exec i3lock
 
     # Kill focused window
 bindsym $mod+Shift+c kill
@@ -99,7 +94,7 @@ bindsym $mod+p exec $menu
 
     # Reload the configuration file
 bindsym $mod+Shift+r reload
-
+bindsym $mod+Shift+t restart
     # Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
@@ -191,6 +186,10 @@ bindsym $mod+Shift+minus move scratchpad
     # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 
+    # media keys
+bindsym XF86AudioRaiseVolume exec "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+bindsym XF86AudioLowerVolume exec "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+bindsym XF86AudioMute        exec "wpctl set-mute   @DEFAULT_AUDIO_SINK@ toggle"
 # Gaps
 gaps inner 8
 gaps outer 8
@@ -229,7 +228,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position bottom
+    position top
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
@@ -243,9 +242,7 @@ bar {
         #background #272e33
         background #000000
         #inactive_workspace #272e33 #272e33 #d3c6aa
-        inactive_workspace #00000000 #00000000 #5c5c5d
+        inactive_workspace #000000 #000000 #5c5c5d
         #focused_workspace  #7fbbb3 #272e33 #d3c6aa
     }
 }
-
-include @sysconfdir@/sway/config.d/*
