@@ -7,7 +7,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'cespare/vim-toml'
   Plug 'fatih/vim-go'
   Plug 'airblade/vim-gitgutter'
-  Plug 'sainnhe/everforest'
+  Plug 'jnurmine/Zenburn'
   call plug#end()
   let g:go_fmt_fail_silently = 0 "let me out even with errors
   let g:go_fmt_command = 'goimports' "autoupdate import
@@ -60,7 +60,7 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme everforest
+  colorscheme zenburn 
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif

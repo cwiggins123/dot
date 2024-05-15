@@ -309,7 +309,7 @@ statusbar = {
 };
 settings = {
   core = {
-    real_name = "";
+    real_name = "Unknown";
     user_name = "TheGreatGazoob";
     nick = "TGG";
   };

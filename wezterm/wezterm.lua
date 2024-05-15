@@ -5,7 +5,7 @@ local config = {}
 if wezterm.config_builder then config = wezterm.config_builder() end 
 
 -- Settings
-config.color_scheme = "Everforest Dark (Gogh)"
+config.color_scheme = "Zenburn (Gogh)"
 config.font = wezterm.font_with_fallback({
   {family = "Jetbrains Mono", scale = 1.66 },
   {family = "Font Awesome 6 Free Regular", scale = 1.66},
