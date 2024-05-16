@@ -9,27 +9,23 @@
 separator=true
 separator_block_width=15
 
-#[greetings]
-#color=#f5af19
-#command=echo "Hello, $USER!"
-#interval=once
+
 [volume]
 command=$HOME/.local/bin/volume
 interval=1
 color=#ffffff
 
+[bitcoin]
+command=$HOME/.local/bin/price btc Bitcoin  24
+interval=3600
+color=#e0af68
+
 [weather]
-command=curl -Ss 'https://wttr.in?O&T&Q' | cut -c 16- | head -2 | xargs echo
+#command=curl -Ss 'https://wttr.in?O&T&Q' | cut -c 16- | head -2 | xargs echo
+command=weather
 interval=3600
 color=#A4c2F4
 
-#[ip]
-#command=hostname -i | awk '{ print "IP:" $1 }'
-#interval=once
-#color=#91E78B
-
 [time]
-command=date '+%Y-%m-%d %I:%M %p'
-interval=1
-
-
+command=~/.local/bin/clock
+interval=60

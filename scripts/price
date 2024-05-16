@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# Usage:
+#	price <currency-base currency> <name of currency> <icon> <signal>
+#	price bat-btc "Basic Attention Token" 🦁 24
+#	This will give the price of BAT denominated in BTC and will update on
+#	signal 24.
+# When the name of the currency is multi-word, put it in quotes.
+
+[ -z "$1" ] && exit 1
+
+url="${CRYPTOURL:-rate.sx}"
+target="${1%%-*}"
+denom="${1##*-}"
+name="${2:-$1}"
+icon="${3:-💰}"
+case "$denom" in
+	"$target"|usd) denom="usd"; symb="$" ;;
+	gbp) symb="£" ;;
+	eur) symb="€" ;;
+	btc) symb="" ;;
+esac
+interval="@14d"	# History contained in chart preceded by '@' (7d = 7 days)
+dir="${XDG_CACHE_HOME:-$HOME/.cache}/crypto-prices"
+pricefile="$dir/$target-$denom"
+chartfile="$dir/$target-$denom-chart"
+filestat="$(stat -c %x "$pricefile" 2>/dev/null)"
+
+[ -d "$dir" ] || mkdir -p "$dir"
+
+updateprice() { curl -sf -m 1 --fail-early $denom.$url/{1$target,$target$interval} --output "$pricefile" --output "$chartfile" ||
+	rm -f "$pricefile" "$chartfile" ;}
+
+[ "${filestat%% *}" != "$(date '+%Y-%m-%d')" ] &&
+	updateme="1"
+
+[ -n "$updateme" ] &&
+	updateprice "$target" &&
+	[ -n "$showupdate" ] &&
+	notify-send "$icon Update complete." "$name price is now
+\$$(cat "$pricefile")"
+
+[ -f "$pricefile" ] && printf "%s%s%0.2f" "$icon " "$symb" "$(cat "$pricefile")"

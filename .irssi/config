@@ -314,3 +314,6 @@ settings = {
     nick = "TGG";
   };
 };
+ignores = (
+  { level = "JOINS PARTS QUITS"; }
+);

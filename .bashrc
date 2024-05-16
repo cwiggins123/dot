@@ -42,7 +42,7 @@ export CLIP_DIR="$VIDEOS/Clips"
 export CLIP_DATA="$GHREPOS/cmd-clip/data"
 export CLIP_VOLUME=0
 export CLIP_SCREEN=0
-export TERM=xterm-256color
+export TERM=tmux-256color
 export HRULEWIDTH=73
 export EDITOR=vi
 export VISUAL=vi
@@ -161,6 +161,7 @@ alias coin="clip '(yes|no)'"
 alias top=btop
 alias iam=live
 alias fetch=fastfetch
+alias neofetch=fastfetch
 alias suod=sudo
 alias sduo=sudo
 

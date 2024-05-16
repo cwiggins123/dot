@@ -1,0 +1,37 @@
+#!/bin/bash 
+
+fullString=$(curl -Ss 'https://wttr.in?O&T&Q' | cut -c 16- | head -2 | xargs echo )
+forecast=$(echo $fullString | awk '{ print $1 }')
+
+case $forecast in
+
+  "Sunny")
+    icon="☀️"
+    ;;
+
+  "Partly")
+    icon="🌤️"
+    ;;
+
+  "Cloudy")
+    icon="⛅"
+    ;;
+
+  "Mostly")
+    icon="🌥️"
+    ;;
+
+  "Light")
+    icon="🌦️"
+    ;;
+
+  "Moderate")
+    icon="🌧️"
+    ;;
+
+  "Heavy")
+    icon="⛈️"
+    ;;
+
+esac
+echo " $icon $fullString "
