@@ -8,7 +8,7 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 config.color_scheme = "Tokyo Night Storm (Gogh)"
 config.font = wezterm.font_with_fallback({
   {family = 'CaskaydiaCove Nerd Font', scale = 1.66 },
-  {family = 'Noto sans', scale = 1.66 },
+  {family = 'Cascadia Code', scale = 1.66},
 })
 config.window_background_opacity = 0.85 
 config.window_decorations = "RESIZE"

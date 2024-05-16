@@ -1,3 +1,7 @@
+# this was copy/pasted from my sway config
+# if anything looks weird, that is why
+
+
 ### Autostart
 exec --no-startup-id !(pidof xwallpaper) && xwallpaper --zoom $HOME/Pictures/gentoo.png
 exec --no-startup-id !(pidof xcompmgr) && xcompmgr 
@@ -18,13 +22,15 @@ set $right l
 # Your preferred terminal emulator
 set $term wezterm
 # Your preferred application launcher
-set $menu dmenu_run -b -fn "Cascadia Code:size=20"
+set $menu dmenu_run -fn "CaskaydiaCove Nerd Font:size=20"
 
 ### font stuff
-font pango:Cascadia Code 18
+font pango:CaskaydiaCove Nerd Font  18
 
 ### Titlebar
-default_border pixel 4
+title_align center
+default_border none
+default_floating_border normal
 hide_edge_borders smart
 
 ### Key bindings
@@ -55,7 +61,7 @@ bindsym $mod+Shift+u exec dmenuunicode
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+t restart
     # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+#bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X11 session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -188,7 +194,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position bottom 
+    position top 
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
@@ -200,9 +206,9 @@ bar {
         statusline #ffffff
         separator  #ffffff
         #background #272e33
-        background #000000
+        #background #000000
         #inactive_workspace #272e33 #272e33 #d3c6aa
-        inactive_workspace #222222 #222222 #6b6b6b
+        #bottominactive_workspace #222222 #222222 #6b6b6b
         #focused_workspace  #7fbbb3 #272e33 #d3c6aa
     }
 }
