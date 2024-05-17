@@ -12,10 +12,11 @@ ln -sd "$PWD/wezterm/" "$HOME/.config/"
 ln -sd "$PWD/i3/" "$HOME/.config/"
 ln -sd "$PWD/sway/" "$HOME/.config/"
 ln -sd "$PWD/i3blocks" "$HOME/.config/"
-ln -sd "$PWD/picom" "$HOME/.picom"
-ln -sd "$PWD/.irssi" "$HOME/.irssi"
+ln -sd "$PWD/picom" "$HOME/.picom/"
+ln -sd "$PWD/.irssi" "$HOME/.irssi/"
+ln -sd "$PWD/scripts" "$HOME/.local/bin/"
 
-for i in vim lynx git tmux docker podman scripts ; do
+for i in vim lynx git tmux docker podman ; do
   cd $i && ./setup
   cd -
 done

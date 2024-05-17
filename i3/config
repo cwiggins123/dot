@@ -1,14 +1,11 @@
 # this was copy/pasted from my sway config
 # if anything looks weird, that is why
 
-
 ### Autostart
-exec --no-startup-id !(pidof xwallpaper) && xwallpaper --zoom $HOME/Pictures/gentoo.png
+exec --no-startup-id !(pidof xwallpaper) && xwallpaper --zoom $HOME/Pictures/mountain1.jpg
 exec --no-startup-id !(pidof xcompmgr) && xcompmgr 
 exec --no-startup-id !(pidof pipewire) && gentoo-pipewire-launcher 
-exec --no-startup-id wezterm --class mus,mus   -e ncmpcpp
-exec --no-startup-id wezterm --class news,news -e newsboat
-exec --no-startup-id wezterm --class fm,fm     -e vifm 
+exec --no-startup-id !(pidof unclutter) && unclutter
 
 ### Variables
 #
@@ -29,7 +26,7 @@ font pango:CaskaydiaCove Nerd Font  18
 
 ### Titlebar
 title_align center
-default_border none
+default_border normal
 default_floating_border normal
 hide_edge_borders smart
 
@@ -60,8 +57,7 @@ bindsym $mod+Shift+u exec dmenuunicode
     # Reload the configuration file
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+t restart
-    # Exit sway (logs you out of your Wayland session)
-#bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X11 session.' -B 'Yes, exit sway' 'swaymsg exit'
+
 #
 # Moving around:
 #
@@ -141,11 +137,29 @@ bindsym $mod+a focus parent
 
 # Scratchpad:
 
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set 625 400
+for_window [instance="dropdown"] move scratchpad
+for_window [instance="dropdown"] border pixel 3
+exec wezterm -n dropdown -e tmux
+
+for_window [instance="math"] floating enable 
+for_window [instance="math"] resize set 625 400
+for_window [instance="math"] move scratchpad
+for_window [instance="math"] border pixel 3
+exec wezterm -n math -e R -q
+
+for_window [instance="mus"] floating enable 
+for_window [instance="mus"] resize set 625 400
+for_window [instance="mus"] move scratchpad
+for_window [instance="mus"] border pixel 3
+exec wezterm -n mus -e ncmpcpp
 
     # Move the currently focused window to the cratchpad
-bindsym $mod+m [class="mus"]  scratchpad show; move position center
-bindsym $mod+n [class="news"] scratchpad show; move position center
-bindsym $mod+o [class="fm"]   scratchpad show; move position center
+
+bindsym $mod+o [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
+bindsym $mod+m [instance="math"] scratchpad show; [instance="math"] move position center
+bindsym $mod+n [instance="mus"] scratchpad show; [instance="mus"] move position center
 bindsym $mod+Shift+minus move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
@@ -160,6 +174,8 @@ bindsym XF86AudioMute        exec "wpctl set-mute   @DEFAULT_AUDIO_SINK@ toggle"
 gaps inner 8
 gaps outer 8
 smart_gaps on
+bindsym $mod+Mod1+s gaps inner current plus 5
+bindsym $mod+Mod1+Shift+s gaps inner current minus 5
 #bindsym $mod+    gaps plus  2
 #bindsym $mod+    gaps minus 2
 #bindsym $mod+    gaps toggle 
@@ -171,10 +187,10 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $mod+l resize shrink width 10px
+    bindsym $mod+j resize grow height 10px
+    bindsym $mod+k resize shrink height 10px
+    bindsym $mod+h resize grow width 10px
 
     # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
@@ -205,7 +221,7 @@ bar {
         #statusline #d3c6aa
         statusline #ffffff
         separator  #ffffff
-        #background #272e33
+        background #272e33
         #background #000000
         #inactive_workspace #272e33 #272e33 #d3c6aa
         #bottominactive_workspace #222222 #222222 #6b6b6b

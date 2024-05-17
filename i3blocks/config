@@ -16,7 +16,7 @@ interval=1
 color=#ffffff
 
 [bitcoin]
-command=$HOME/.local/bin/price btc Bitcoin  24
+command=echo $($HOME/.local/bin/price btc Bitcoin  24)
 interval=3600
 color=#e0af68
 

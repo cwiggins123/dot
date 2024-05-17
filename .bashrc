@@ -162,8 +162,9 @@ alias top=btop
 alias iam=live
 alias fetch=fastfetch
 alias neofetch=fastfetch
-alias suod=sudo
-alias sduo=sudo
+alias suod=doas
+alias sduo=doas
+alias sudo=doas
 
 _have vim && alias vi=vim
 

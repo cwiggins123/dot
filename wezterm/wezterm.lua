@@ -5,13 +5,13 @@ local config = {}
 if wezterm.config_builder then config = wezterm.config_builder() end 
 
 -- Settings
-config.color_scheme = "Tokyo Night Storm (Gogh)"
+config.color_scheme = "OneHalfDark"
 config.font = wezterm.font_with_fallback({
   {family = 'CaskaydiaCove Nerd Font', scale = 1.66 },
   {family = 'Cascadia Code', scale = 1.66},
 })
-config.window_background_opacity = 0.85 
-config.window_decorations = "RESIZE"
+config.window_background_opacity = 0.75
+config.window_decorations = "TITLE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "home"
