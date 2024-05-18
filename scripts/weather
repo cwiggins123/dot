@@ -17,6 +17,10 @@ case $forecast in
     icon="⛅"
     ;;
 
+  "Overcast")
+    icon=" "
+    ;;
+
   "Mostly")
     icon="🌥️"
     ;;

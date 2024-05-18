@@ -9,8 +9,9 @@ config.color_scheme = "OneHalfDark"
 config.font = wezterm.font_with_fallback({
   {family = 'CaskaydiaCove Nerd Font', scale = 1.66 },
   {family = 'Cascadia Code', scale = 1.66},
+  {family = 'Font Awesome 6 Free,Font Awesome 6 Free Regular', scale = 1.66},
 })
-config.window_background_opacity = 0.75
+config.window_background_opacity = 0.90
 config.window_decorations = "TITLE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000

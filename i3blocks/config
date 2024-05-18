@@ -15,6 +15,21 @@ command=$HOME/.local/bin/volume
 interval=1
 color=#ffffff
 
+[temperature]
+command=$HOME/.local/bin/temp
+interval=1
+#T_WARN=70
+#T_CRIT=90
+color=#ffffff
+
+[cpu]
+command=$HOME/.local/bin/cpu_usage
+interval=10
+LABEL= 
+#T_WARN=50
+#T_WARN=80
+DECIMALS=2
+
 [bitcoin]
 command=echo $($HOME/.local/bin/price btc Bitcoin  24)
 interval=3600

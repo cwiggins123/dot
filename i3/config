@@ -2,10 +2,10 @@
 # if anything looks weird, that is why
 
 ### Autostart
-exec --no-startup-id !(pidof xwallpaper) && xwallpaper --zoom $HOME/Pictures/mountain1.jpg
-exec --no-startup-id !(pidof xcompmgr) && xcompmgr 
+exec --no-startup-id feh --bg-fill $HOME/Pictures/village2.jpg
+exec --no-startup-id picom 
 exec --no-startup-id !(pidof pipewire) && gentoo-pipewire-launcher 
-exec --no-startup-id !(pidof unclutter) && unclutter
+exec --no-startup-id unclutter
 
 ### Variables
 #
@@ -141,19 +141,19 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 3
-exec wezterm -n dropdown -e tmux
+exec --no-startup-id st -n dropdown -e tmux
 
 for_window [instance="math"] floating enable 
 for_window [instance="math"] resize set 625 400
 for_window [instance="math"] move scratchpad
 for_window [instance="math"] border pixel 3
-exec wezterm -n math -e R -q
+exec --no-startup-id st -n math -e R -q
 
 for_window [instance="mus"] floating enable 
 for_window [instance="mus"] resize set 625 400
 for_window [instance="mus"] move scratchpad
 for_window [instance="mus"] border pixel 3
-exec wezterm -n mus -e ncmpcpp
+exec --no-startup-id st -n mus -e ncmpcpp
 
     # Move the currently focused window to the cratchpad
 

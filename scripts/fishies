@@ -21,45 +21,6 @@ $SIG{"INT"} = \&handle;
 # the *only* fish/asciiquarium without the default black background.
 #
 # Thanks to @qmacro for putting rwx into a special fishy.
-#
-#############################################################################
-# Asciiquarium - An aquarium animation in ASCII art
-#
-# This program displays an aquarium/sea animation using ASCII art.
-# It requires the module Term::Animation, which requires Curses. You
-# can get both modules from http://search.cpan.org. Asciiquarium will
-# only run on platforms with a curses library, so Windows is not supported.
-#
-# The current version of this program is available at:
-#
-# http://robobunny.com/projects/asciiquarium
-#
-#############################################################################
-# Author:
-#   Kirk Baucom <kbaucom@schizoid.com>
-#
-# Contributors:
-#   Joan Stark: http://www.geocities.com/SoHo/7373/
-#     most of the ASCII art
-#
-# License:
-#
-# Copyright (C) 2013 Kirk Baucom (kbaucom@schizoid.com)
-#
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License along
-# with this program; if not, write to the Free Software Foundation, Inc.,
-# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-#############################################################################
 
 use Term::Animation 2.0;
 use Term::Animation::Entity;
