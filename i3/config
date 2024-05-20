@@ -2,7 +2,7 @@
 # if anything looks weird, that is why
 
 ### Autostart
-exec --no-startup-id feh --bg-fill $HOME/Pictures/village2.jpg
+exec --no-startup-id feh --bg-fill $HOME/Pictures/term1.jpg
 exec --no-startup-id picom 
 exec --no-startup-id !(pidof pipewire) && gentoo-pipewire-launcher 
 exec --no-startup-id unclutter

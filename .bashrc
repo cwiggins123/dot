@@ -55,6 +55,7 @@ export CGO_ENABLED=0
 export PYTHONDONTWRITEBYTECODE=2 # fucking shit-for-brains var name
 export LC_COLLATE=C
 export CFLAGS="-Wall -Wextra -Werror -O0 -g -fsanitize=address -fno-omit-frame-pointer -finstrument-functions"
+export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 
 export LESS_TERMCAP_mb="[35m" # magenta
 export LESS_TERMCAP_md="[33m" # yellow
@@ -162,9 +163,8 @@ alias top=btop
 alias iam=live
 alias fetch=fastfetch
 alias neofetch=fastfetch
-alias suod=doas
-alias sduo=doas
-alias sudo=doas
+alias suod=sudo
+alias sduo=sudo
 
 _have vim && alias vi=vim
 
