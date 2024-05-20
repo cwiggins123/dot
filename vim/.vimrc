@@ -59,7 +59,7 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme onehalfdark
+  colorscheme lunaperche
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif

@@ -2,7 +2,7 @@
 # if anything looks weird, that is why
 
 ### Autostart
-exec --no-startup-id feh --bg-fill $HOME/Pictures/term1.jpg
+#exec --no-startup-id feh --bg-fill $HOME/Pictures/term1.jpg
 exec --no-startup-id picom 
 exec --no-startup-id !(pidof pipewire) && gentoo-pipewire-launcher 
 exec --no-startup-id unclutter
@@ -221,10 +221,6 @@ bar {
         #statusline #d3c6aa
         statusline #ffffff
         separator  #ffffff
-        background #272e33
-        #background #000000
-        #inactive_workspace #272e33 #272e33 #d3c6aa
-        #bottominactive_workspace #222222 #222222 #6b6b6b
-        #focused_workspace  #7fbbb3 #272e33 #d3c6aa
+        background #000000
     }
 }
