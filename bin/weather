@@ -5,7 +5,7 @@ forecast=$(echo $fullString | awk '{ print $1 }')
 
 case $forecast in
 
-  "Sunny")
+  "Clear")
     icon="☀️"
     ;;
 

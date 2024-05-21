@@ -7,7 +7,7 @@ local config = {}
 -- Settings
 config.color_scheme = "Oxocarbon Dark (Gogh)"
 config.font = wezterm.font_with_fallback({
-  {family = "Blex Mono Nerd Font", scale = 1.1 }
+  {family = "BlexMono Nerd Font Propo", scale = 1.2 }
 })
 
 return config

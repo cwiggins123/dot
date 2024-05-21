@@ -180,6 +180,16 @@ bindsym $mod+Mod1+Shift+s gaps inner current minus 5
 #bindsym $mod+    gaps minus 2
 #bindsym $mod+    gaps toggle 
 #
+
+### colors
+client.focused          #78A9FF #33B1FF #161616 #2E9EF4   #285577
+client.focused_inactive #262626 #525252 #DDE1E6 #525252   #525252
+client.unfocused        #262626 #262626 #525252 #262626   #262626
+client.urgent           #2F343A #EE5396 #161616 #EE5396   #EE5396
+client.placeholder      #161616 #262626 #FFFFFF #161616   #262626
+
+client.background       #FFFFFF
+
 # Resizing containers:
 #
 mode "resize" {
@@ -218,9 +228,14 @@ bar {
     status_command i3blocks
 
     colors {
-        #statusline #d3c6aa
-        statusline #ffffff
-        separator  #ffffff
-        background #000000
+    background #161616
+    statusline #FFFFFF
+    separator  #666666
+
+    focused_workspace  #78A9FF #BE95FF #161616
+    active_workspace   #262626 #161616 #FFFFFF
+    inactive_workspace #262626 #161616 #888888
+    urgent_workspace   #161616 #EE5396 #161616
+    binding_mode       #161616 #EE5396 #161616
     }
 }
