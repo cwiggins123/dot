@@ -5,7 +5,6 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Autostart
-exec_always autotiling
 
 ### Variables
 #
@@ -24,7 +23,7 @@ set $term wezterm
 set $menu wofi -S run
 
 ### font stuff
-font pango:CaskaydiaCoveNerdFontMono 18
+font pango:CaskaydiaCove Nerd Font 18
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)

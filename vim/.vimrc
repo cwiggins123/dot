@@ -60,7 +60,7 @@ if has("syntax")
   syntax on
   set background=dark
   colorscheme lunaperche
-  hi Normal guibg=NONE ctermbg=NONE
+ " hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 endif
 
@@ -68,7 +68,7 @@ endif
 " more misc stuff "
 """""""""""""""""""
 set textwidth=80
-"set colorcolumn=81
+set colorcolumn=81
 set expandtab
 set nobackup
 set noswapfile
