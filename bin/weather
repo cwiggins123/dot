@@ -9,6 +9,10 @@ case $forecast in
     icon="☀️"
     ;;
 
+  "Sunny")
+    icon="☀️"
+    ;;
+
   "Partly")
     icon="🌤️"
     ;;

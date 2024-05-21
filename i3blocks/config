@@ -9,7 +9,6 @@
 separator=true
 separator_block_width=15
 
-
 [volume]
 command=$HOME/.local/bin/volume
 interval=1
@@ -33,7 +32,7 @@ DECIMALS=2
 [bitcoin]
 command=echo $($HOME/.local/bin/price btc Bitcoin  24)
 interval=3600
-color=#e0af68
+color=#ff6f00
 
 [weather]
 #command=curl -Ss 'https://wttr.in?O&T&Q' | cut -c 16- | head -2 | xargs echo
