@@ -28,7 +28,7 @@ font pango:CaskaydiaCove Nerd Font 18
 title_align center
 default_border normal
 default_floating_border normal
-hide_edge_borders smart
+hide_edge_borders both
 
 ### Key bindings
 #
