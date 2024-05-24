@@ -7,9 +7,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'cespare/vim-toml'
   Plug 'fatih/vim-go'
   Plug 'airblade/vim-gitgutter'
-  Plug 'lifepillar/vim-solarized8'
   Plug 'itchyny/lightline.vim'
-  Plug 'catppuccin/vim', { 'as': 'catppuccin'}
+  Plug 'ghifarit53/tokyonight-vim'
   call plug#end()
   let g:go_fmt_fail_silently = 0 "let me out even with errors
   let g:go_fmt_command = 'goimports' "autoupdate import
@@ -62,8 +61,10 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme oxocarbon
-  let g:lightline = {'colorscheme': 'catppuccin_macchiato'}
+  let g:tokypnight_style = 'storm'
+  let g:tokyonight_enable_italic = 1
+  colorscheme tokyonight 
+  let g:lightline = {'colorscheme': 'tokyonight'}
   set noshowmode 
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
