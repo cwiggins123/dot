@@ -8,7 +8,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'fatih/vim-go'
   Plug 'airblade/vim-gitgutter'
   Plug 'itchyny/lightline.vim'
-  Plug 'ghifarit53/tokyonight-vim'
+  Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+  Plug 'gleam-lang/gleam.vim'
   call plug#end()
   let g:go_fmt_fail_silently = 0 "let me out even with errors
   let g:go_fmt_command = 'goimports' "autoupdate import
@@ -61,10 +62,8 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  let g:tokypnight_style = 'storm'
-  let g:tokyonight_enable_italic = 1
-  colorscheme tokyonight 
-  let g:lightline = {'colorscheme': 'tokyonight'}
+  colorscheme catppuccin_mocha
+  let g:lightline = {'colorscheme': 'catppuccin_mocha'}
   set noshowmode 
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
