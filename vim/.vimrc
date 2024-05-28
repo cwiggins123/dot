@@ -8,11 +8,41 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'airblade/vim-gitgutter'
   Plug 'jnurmine/Zenburn'
-  Plug 'gleam-lang/gleam.vim'
+  Plug 'dense-analysis/ale'
   call plug#end()
-  let g:go_fmt_fail_silently = 0 "let me out even with errors
-  let g:go_fmt_command = 'goimports' "autoupdate import
+  let g:ale_sign_error = '☠'
+  let g:ale_sign_warning = '🙄'
+  let g:ale_linters = {'go': ['gometalinter', 'gofmt','gobuild']}
+
+  " pandoc
+  let g:pandoc#formatting#mode = 'h' " A'
+  let g:pandoc#formatting#textwidth = 72
+
+  " golang
+  let g:go_fmt_fail_silently = 0
+  let g:go_fmt_command = 'goimports'
   let g:go_fmt_autosave = 1
+  let g:go_gopls_enabled = 1
+  let g:go_highlight_types = 1
+  let g:go_highlight_fields = 1
+  let g:go_highlight_functions = 1
+  let g:go_highlight_function_calls = 1
+  let g:go_highlight_operators = 1
+  let g:go_highlight_extra_types = 1
+  let g:go_highlight_variable_declarations = 1
+  let g:go_highlight_variable_assignments = 1
+  let g:go_highlight_build_constraints = 1
+  let g:go_highlight_diagnostic_errors = 1
+  let g:go_highlight_diagnostic_warnings = 1
+  "let g:go_auto_type_info = 1 " forces 'Press ENTER' too much
+  let g:go_auto_sameids = 0
+  "    let g:go_metalinter_command='golangci-lint'
+  "    let g:go_metalinter_command='golint'
+  "    let g:go_metalinter_autosave=1
+  set updatetime=100
+  "let g:go_gopls_analyses = { 'composites' : v:false }
+  au FileType go nmap <leader>m ilog.Print("made")<CR><ESC>
+  au FileType go nmap <leader>n iif err != nil {return err}<CR><ESC>
 else
   autocmd vimleavepre *.go !gofmt -w % " backup if fatih fails
 endif
@@ -67,7 +97,6 @@ if has("syntax")
   hi LineNr guibg=NONE ctermbg=NONE
 endif
 
-"""""""""""""""""""
 " more misc stuff "
 """""""""""""""""""
 set textwidth=80
@@ -88,6 +117,34 @@ set showmatch
 filetype plugin indent on 
 set wildmenu
 set omnifunc=syntaxcomplete#Complete
+
+" force loclist to always close when buffer does (affects vim-go, etc.)
+augroup CloseLoclistWindowGroup
+  autocmd!
+  autocmd QuitPre * if empty(&buftype) | lclose | endif
+augroup END
+
+" format perl on save
+if has("eval") " vim-tiny detection
+fun! s:Perltidy()
+  let l:pos = getcurpos()
+  silent execute '%!perltidy -i=2'
+  call setpos('.', l:pos)
+endfun
+"autocmd FileType perl autocmd BufWritePre <buffer> call s:Perltidy()
+endif
+
+" format shell on save
+if has("eval") " vim-tiny detection
+" TODO check for shfmt and shellcheck before defining
+" FIXME stop from blowing away file when there is shell error
+fun! s:FormatShell()
+  let l:pos = getcurpos()
+  "silent execute '%!shfmt' " FIXME: bug report to shfmt
+  call setpos('.', l:pos)
+endfun
+autocmd FileType sh autocmd BufWritePre <buffer> call s:FormatShell()
+endif
 
 fun! JumpToDef()
   if exists("*GotoDefinition_" . &filetype)
