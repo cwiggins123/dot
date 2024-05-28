@@ -5,10 +5,9 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   call plug#begin()
   Plug 'vim-pandoc/vim-pandoc'
   Plug 'cespare/vim-toml'
-  Plug 'fatih/vim-go'
+  Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'airblade/vim-gitgutter'
-  Plug 'itchyny/lightline.vim'
-  Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+  Plug 'jnurmine/Zenburn'
   Plug 'gleam-lang/gleam.vim'
   call plug#end()
   let g:go_fmt_fail_silently = 0 "let me out even with errors
@@ -62,8 +61,7 @@ endif
 if has("syntax")
   syntax on
   set background=dark
-  colorscheme catppuccin_mocha
-  let g:lightline = {'colorscheme': 'catppuccin_mocha'}
+  colorscheme zenburn
   set noshowmode 
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
