@@ -1,5 +1,5 @@
 *.scrollBar: false
-*.faceName: Inconsolata Nerd Font:size=20:antialias=yes
+*.faceName: IosevkaTerm Nerd Font:size=22:antialias=yes
 
 ! X11 colors pieced together by Dmitry Medvinsky.
 ! Based on Vim colorscheme "badwolf" pieced together by Steve Losh.
