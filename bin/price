@@ -40,4 +40,4 @@ updateprice() { curl -sf -m 1 --fail-early $denom.$url/{1$target,$target$interva
 	notify-send "$icon Update complete." "$name price is now
 \$$(cat "$pricefile")"
 
-[ -f "$pricefile" ] && printf "%s%s%0.2f" "$icon " "$symb" "$(cat "$pricefile")"
+[ -f "$pricefile" ] && printf "%s%s%0.2f" " $icon " "$symb" "$(cat "$pricefile") "

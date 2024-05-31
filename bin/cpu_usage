@@ -19,6 +19,7 @@ my $decimals = $ENV{DECIMALS} // 2;
 my $label = $ENV{LABEL} // "";
 my $color_normal = $ENV{COLOR_NORMAL} // "#ffffff";
 my $color_warn = $ENV{COLOR_WARN} // "#e5c07b";
+#LABEL= 
 my $color_crit = $ENV{COLOR_CRIT} // "#e06c75";
 
 sub help {
@@ -50,9 +51,9 @@ $cpu_usage eq -1 and die 'Can\'t find CPU information';
 
 # Print short_text, full_text
 print "${label}";
-printf "%.${decimals}f%%\n", $cpu_usage;
+printf "%.${decimals}f%%\n", $cpu_usage, " ";
 print "${label}";
-printf "%.${decimals}f%%\n", $cpu_usage;
+printf "%.${decimals}f%%\n", $cpu_usage, " ";
 
 # Print color, if needed
 if ($cpu_usage >= $t_crit) {
