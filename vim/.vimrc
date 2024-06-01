@@ -1,6 +1,7 @@
 """""""""""""""""""""
 "     Vim-Plug      "
 """""""""""""""""""""
+" only run if vim-plug is installed
 if filereadable(expand("~/.vim/autoload/plug.vim"))
   call plug#begin()
   Plug 'vim-pandoc/vim-pandoc'
@@ -106,7 +107,7 @@ endif
 " more misc stuff "
 """""""""""""""""""
 set textwidth=80
-set colorcolumn=81
+"set colorcolumn=81
 set expandtab
 set nobackup
 set noswapfile

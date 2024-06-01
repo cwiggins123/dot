@@ -8,7 +8,7 @@ config.font = wezterm.font_with_fallback({
   {family = "IosevkaTerm Nerd Font", scale = 1.75 }
 })
 
-config.window_background_opacity = 0.75
+config.window_background_opacity = 0.85
 config.window_decorations = "TITLE | RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000

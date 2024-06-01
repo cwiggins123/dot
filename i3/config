@@ -91,9 +91,9 @@ bindsym $mod+Shift+Right move right
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:  Terminal"
 set $ws2 "2:  Firefox"
-set $ws3 "3:  Slicer"
-set $ws4 "4:  KVM"
-set $ws5 "5:  Other"
+set $ws3 "3: 🎛️RDP"
+set $ws3 "4:  Slicer"
+set $ws4 "5:  KVM"
 
     # Switch to workspace
 bindsym $mod+1 workspace number 1
