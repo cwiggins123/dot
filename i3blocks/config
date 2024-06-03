@@ -6,13 +6,20 @@
 #     https://vivien.github.io/i3blocks
 
 # Global properties
-separator=true
-separator_block_width=15
+full_text=
+align=center
+color=#666666
+separator=false
+separator_block_width=0
+markup=pango
+
 
 [volume]
 command=$HOME/.local/bin/volume
 interval=1
 color=#ffffff
+
+[separator]
 
 [temperature]
 command=$HOME/.local/bin/temp
@@ -20,6 +27,8 @@ interval=1
 #T_WARN=70
 #T_CRIT=90
 color=#ffffff
+
+[separator]
 
 [cpu]
 command=$HOME/.local/bin/cpu_usage
@@ -34,12 +43,17 @@ DECIMALS=2
 #interval=3600
 #color=#ff6f00
 
+[separator]
+
 [weather]
 #command=curl -Ss 'https://wttr.in?O&T&Q' | cut -c 16- | head -2 | xargs echo
 command=weather
 interval=3600
 color=#A4c2F4
 
+[separator]
+
 [time]
 command=~/.local/bin/clock
+color=#ffffff
 interval=60

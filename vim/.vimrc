@@ -8,8 +8,9 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'cespare/vim-toml'
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'airblade/vim-gitgutter'
-  Plug 'jnurmine/Zenburn'
   Plug 'dense-analysis/ale'
+  Plug 'vim-erlang/vim-erlang-runtime'
+  Plug 'morhetz/gruvbox'
   call plug#end()
   let g:ale_sign_error = '☠'
   let g:ale_sign_warning = '🙄'
@@ -47,7 +48,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
 
   syntax on
   set background=dark
-  colorscheme zenburn 
+  colorscheme gruvbox 
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 
