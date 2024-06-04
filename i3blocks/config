@@ -28,8 +28,6 @@ interval=1
 #T_CRIT=90
 color=#ffffff
 
-[separator]
-
 [cpu]
 command=$HOME/.local/bin/cpu_usage
 interval=1
