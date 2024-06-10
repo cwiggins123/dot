@@ -6,13 +6,17 @@
 #     https://vivien.github.io/i3blocks
 
 # Global properties
-full_text=
+full_text=  
 align=center
 color=#666666
 separator=false
 separator_block_width=0
 markup=pango
 
+[window]
+command=$HOME/.local/bin/window
+interval=1
+color=#ffffff
 
 [volume]
 command=$HOME/.local/bin/volume
