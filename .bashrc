@@ -159,12 +159,13 @@ alias clear='printf "\e[H\e[2J"'
 alias c='printf "\e[H\e[2J"'
 alias coin="clip '(yes|no)'"
 #alias grep="pcregrep"
-alias top=btop
+_have btop && alias top=btop
 alias iam=live
 alias fetch=fastfetch
 alias neofetch=fastfetch
 alias suod=sudo
 alias sduo=sudo
+_have podman && alias docker=podman
 
 _have vim && alias vi=vim
 

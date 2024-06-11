@@ -13,10 +13,12 @@ separator=false
 separator_block_width=0
 markup=pango
 
-[window]
-command=$HOME/.local/bin/window
-interval=1
-color=#ffffff
+#[window]
+#command=$HOME/.local/bin/window
+#interval=1
+#color=#ffffff
+
+#[separator]
 
 [volume]
 command=$HOME/.local/bin/volume
