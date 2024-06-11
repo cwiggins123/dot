@@ -3,9 +3,9 @@ local wezterm = require("wezterm") local config = {}
 -- if wezterm.config_builder then config = wezterm.config_builder() end 
 
 -- Settings
-config.color_scheme = "OneHalfDark"
+config.color_scheme = "Gruvbox Dark (Gogh)"
 config.font = wezterm.font_with_fallback({
-  {family = "Lilex Nerd Font", scale = 1.75 }
+  {family = "3270 Nerd Font", scale = 2.00 }
 })
 
 config.front_end = "WebGpu"

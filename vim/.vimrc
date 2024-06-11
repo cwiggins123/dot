@@ -9,7 +9,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'airblade/vim-gitgutter'
   Plug 'dense-analysis/ale'
-  Plug 'joshdick/onedark.vim'
+  Plug 'lifepillar/vim-gruvbox8'
+  Plug 'itchyny/lightline.vim'
   call plug#end()
 
   let g:ale_sign_error = '☠'
@@ -45,10 +46,14 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   "let g:go_gopls_analyses = { 'composites' : v:false }
   au FileType go nmap <leader>m ilog.Print("made")<CR><ESC>
   au FileType go nmap <leader>n iif err != nil {return err}<CR><ESC>
+  
+  let g:lightline = {
+        \ 'colorscheme': 'gruvbox8',
+        \ }
 
   syntax on
   set background=dark
-  colorscheme onedark
+  colorscheme gruvbox8
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 else
@@ -99,8 +104,8 @@ endif
 " colors "
 """"""""""
 if has("termguicolors")
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu:%lu:%lum"
+  "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  "let &t_8b = "\<Esc>[38;2;%lu:%lu:%lum"
   set termguicolors
 endif
 

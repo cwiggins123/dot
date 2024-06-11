@@ -3,7 +3,7 @@
 
 ### Autostart
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-fill $HOME/Pictures/cp1.jpg
+exec --no-startup-id feh --bg-fill $HOME/Pictures/retro3.jpg
 exec --no-startup-id !(pidof pipewire) && gentoo-pipewire-launcher 
 exec --no-startup-id unclutter
 exec --no-startup-id dunst
@@ -233,7 +233,7 @@ bindsym $mod+Shift+s exec scrot
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    font pango:Lilex Nerd Font 20 
+    font pango:3270 Nerd Font 26 
     position top 
 
     # When the status_command prints a new line to stdout, swaybar updates.
