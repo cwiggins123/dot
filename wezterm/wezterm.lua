@@ -9,7 +9,7 @@ config.font = wezterm.font_with_fallback({
 })
 
 config.front_end = "WebGpu"
-config.window_background_opacity = .90
+config.window_background_opacity = 1.0
 config.window_decorations = "TITLE | RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000

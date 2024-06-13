@@ -12,7 +12,7 @@ ln -sd "$PWD/wezterm/" "$HOME/.config/"
 ln -sd "$PWD/i3/" "$HOME/.config/"
 #ln -sd "$PWD/sway/" "$HOME/.config/"
 ln -sd "$PWD/i3blocks" "$HOME/.config/"
-ln -sd "$PWD/picom" "$HOME/.config/"
+#ln -sd "$PWD/picom" "$HOME/.config/"
 ln -sd "$PWD/.irssi" "$HOME/"
 ln -sd "$PWD/bin" "$HOME/.local/"
 

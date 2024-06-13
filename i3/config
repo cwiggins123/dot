@@ -1,6 +1,4 @@
 ### Autostart
-exec --no-startup-id xcompmgr
-exec --no-startup-id feh --bg-fill $HOME/Pictures/retro3.jpg
 exec --no-startup-id !(pidof pipewire) && gentoo-pipewire-launcher 
 exec --no-startup-id unclutter
 
