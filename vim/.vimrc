@@ -9,8 +9,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'airblade/vim-gitgutter'
   Plug 'dense-analysis/ale'
-  Plug 'lifepillar/vim-gruvbox8'
-  Plug 'itchyny/lightline.vim'
   call plug#end()
 
   let g:ale_sign_error = '☠'
@@ -47,13 +45,9 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   au FileType go nmap <leader>m ilog.Print("made")<CR><ESC>
   au FileType go nmap <leader>n iif err != nil {return err}<CR><ESC>
   
-  let g:lightline = {
-        \ 'colorscheme': 'gruvbox8',
-        \ }
-
   syntax on
   set background=dark
-  colorscheme gruvbox8
+  colorscheme base16-3024
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 else
@@ -62,7 +56,6 @@ else
   if has("syntax")
     syntax on
     set background=dark
-    colorscheme default
     hi Normal guibg=NONE ctermbg=NONE
     hi LineNr guibg=NONE ctermbg=NONE
   endif
@@ -104,15 +97,12 @@ endif
 " colors "
 """"""""""
 if has("termguicolors")
-  "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  "let &t_8b = "\<Esc>[38;2;%lu:%lu:%lum"
   set termguicolors
 endif
 
 " more misc stuff "
 """""""""""""""""""
 set textwidth=80
-"set colorcolumn=81
 set expandtab
 set nobackup
 set noswapfile

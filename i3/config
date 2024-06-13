@@ -1,12 +1,8 @@
-# this was copy/pasted from my sway config
-# if anything looks weird, that is why
-
 ### Autostart
-exec --no-startup-id picom
+exec --no-startup-id xcompmgr
 exec --no-startup-id feh --bg-fill $HOME/Pictures/retro3.jpg
 exec --no-startup-id !(pidof pipewire) && gentoo-pipewire-launcher 
 exec --no-startup-id unclutter
-exec --no-startup-id dunst
 
 ### Variables
 #
@@ -27,8 +23,8 @@ font pango:Lilex Nerd Font 0
 
 ### Titlebar
 #title_align center
-default_border pixel 0 
-default_floating_border pixel 0
+default_border pixel 3
+default_floating_border pixel 3
 
 ### Key bindings
 #
@@ -48,14 +44,7 @@ bindsym $mod+p exec $menu
 bindsym $mod+Shift+u exec dmenuunicode
 bindsym $mod+Shift+p exec passmenu
 
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
-    #floating_modifier $mod normal
-
-    # Reload the configuration file
+# Reload the configuration file
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+t restart
 
@@ -83,17 +72,10 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
 #
 # Workspaces:
 #
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
-#set $ws1 "1:  Terminal"
-#set $ws2 "2:  Firefox"
-#set $ws3 "3: 🎛️RDP"
-#set $ws3 "4:  Slicer"
-#set $ws4 "5:  KVM"
-
     # Switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -117,8 +99,6 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
 #
 # Layout stuff:
 #
@@ -151,19 +131,19 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 3
-exec --no-startup-id st -n dropdown -e tmux
+exec --no-startup-id wezterm -n dropdown -e tmux
 
 for_window [instance="math"] floating enable 
 for_window [instance="math"] resize set 625 400
 for_window [instance="math"] move scratchpad
 for_window [instance="math"] border pixel 3
-exec --no-startup-id st -n math -e R -q
+exec --no-startup-id wezterm -n math -e R -q
 
 for_window [instance="mus"] floating enable 
 for_window [instance="mus"] resize set 625 400
 for_window [instance="mus"] move scratchpad
 for_window [instance="mus"] border pixel 3
-exec --no-startup-id st -n mus -e ncmpcpp
+exec --no-startup-id wezterm -n mus -e ncmpcpp
 
     # Move the currently focused window to the cratchpad
 
@@ -233,23 +213,7 @@ bindsym $mod+Shift+s exec scrot
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    font pango:3270 Nerd Font 26 
+    font pango:3270 Nerd Font 22 
     position top 
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    #status_command while date +'%Y-%m-%d %X'; do sleep 1; done
     status_command i3blocks
-
-    #colors {
-    #background #00000099
-    #statusline #FFFFFF
-    #separator  #666666
-
-    #focused_workspace  #4C789980 #28557780 #FFFFFF
-    #active_workspace   #333333 #222222 #FFFFFF
-    #inactive_workspace #333333 #222222 #888888
-    #urgent_workspace   #2F343A #900000 #FFFFFF
-    #binding_mode       #2F343A #900000 #FFFFFF
-    #}
 }
