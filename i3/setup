@@ -1,0 +1,9 @@
+#!/bin/sh
+
+rm -rf "$HOME"/.config/i3/
+rm -rf "$HOME"/.config/i3blocks/
+mkdir "$HOME"/.config/i3
+mkdir "$HOME"/.config/i3blocks
+
+ln -s "$PWD"/setup "$HOME"/.config/i3/
+ln -s "$PWD"/i3blocks/config "$HOME"/.config/i3blocks/
