@@ -1,69 +1,70 @@
 *.scrollBar: false
-*.faceName: IosevkaTerm Nerd Font:size=22:antialias=yes
+*.faceName: 3270 Nerd Font:size=26
 
-! X11 colors pieced together by Dmitry Medvinsky.
-! Based on Vim colorscheme "badwolf" pieced together by Steve Losh.
-! vim: fdm=marker
+!! urxvt
+! fonts
+URxvt.font: xft:3270 Nerd Font:style=Regular:size=26:antialias=yes
+URxvt.boldFont: xft:3270 Nerd Font:style=Bold:size=26:antialias=yes
+URxvt.italicFont: xft:3270 Nerd Font:style=Italic:size=26:antialias=yes
+URxvt.boldItalicFont: xft:3270 Nerd Font:style=Bold Italic:size=26:antialias=yes
 
-! Colors definition {{{
-#define   plain            #f8f6f2
-#define   snow             #ffffff
-#define   coal             #000000
+! basic settings
+URxvt.letterspace: 0
+URxvt.lineSpace: 0
+URxvt.internalborder: 24
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URvxt.saveline: 2048
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.geometry: 80x420+0+0
 
-#define   brightgravel     #d9cec3
-#define   lightgravel      #998f84
-#define   gravel           #857f78
-#define   mediumgravel     #666462
-#define   deepgravel       #45413b
-#define   deepergravel     #35322d
-#define   darkgravel       #242321
-#define   blackgravel      #1c1b1a
-#define   blackestgravel   #141413
+! perls
+! most of this is replaced by tmux, but is still here as a fallback
+URxvt.perl-ext-common: default,tabbed,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 3
+URxvt.tabbed.tab-bg: 0
+URxvt.urlLauncher: firefox
+URxvt.underlineURLs:true
+URxvt.urlButton: 1
 
-#define   dalespale        #fade3e
-#define   dirtyblonde      #f4cf86
-#define   taffy            #ff2c4b
-#define   saltwatertaffy   #8cffba
-#define   tardis           #0a9dff
-#define   orange           #ffa724
-#define   lime             #aeee00
-#define   dress            #ff9eb8
-#define   toffee           #b88853
-#define   coffee           #c7915b
-#define   darkroast        #88633f
-! }}}
-
-
-! Resourses {{{
-*background:  blackgravel
-*foreground:  plain
-*cursorColor: tardis
-*scrollColor: deepgravel
-*fadeColor:   snow
-*fading:      20
+!! 3024 from base16
+*background:  #000000
+*foreground:  #a5a2a2
+*cursorColor: magenta 
+*scrollColor: #a5a2a2
 
 !        black
-*color0:      blackgravel
-*color8:      mediumgravel
+*color0:      #000000
+*color8:      #5c5855
 !        red
-*color1:      taffy
-*color9:      taffy
+*color1:      #db2d20
+*color9:      #db2d20
 !        green
-*color2:      lime
-*color10:     lime
+*color2:      #01a252 
+*color10:     #01a252
 !        yellow
-*color3:      dalespale
-*color11:     orange
+*color3:      #fded02
+*color11:     #fded02
 !        blue
-*color4:      tardis
-*color12:     tardis
+*color4:      #01a0e4
+*color12:     #01a0e4
 !        magenta
-*color5:      dress
-*color13:     dress
+*color5:      #a16a94
+*color13:     #a16a94
 !        cyan
-*color6:      saltwatertaffy
-*color14:     saltwatertaffy
+*color6:      #b5e4f4
+*color14:     #b5e4f4
 !        white
-*color7:      brightgravel
-*color15:     snow
-! }}}
+*color7:      #a5a2a2
+*color15:     #f7f7f7 
