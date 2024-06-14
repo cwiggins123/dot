@@ -33,6 +33,7 @@ interval=1
 #T_WARN=70
 #T_CRIT=90
 color=#ffffff
+SENSOR_CHIP=k10temp-pci-00c3
 
 [cpu]
 command=$HOME/.local/bin/cpu_usage

@@ -12,7 +12,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term urxvt
+set $term st
 # Your preferred application launcher
 set $menu dmenu_run -fn "Lilex Nerd Font:size=21"
 
@@ -129,19 +129,19 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move scratchpad
 for_window [instance="dropdown"] border pixel 3
-exec --no-startup-id urxvt -name dropdown -e tmux
+exec --no-startup-id st -n dropdown -e tmux
 
 for_window [instance="math"] floating enable 
 for_window [instance="math"] resize set 625 400
 for_window [instance="math"] move scratchpad
 for_window [instance="math"] border pixel 3
-exec --no-startup-id urxvt -name math -e R -q
+exec --no-startup-id st -n math -e R -q
 
 for_window [instance="mus"] floating enable 
 for_window [instance="mus"] resize set 625 400
 for_window [instance="mus"] move scratchpad
 for_window [instance="mus"] border pixel 3
-exec --no-startup-id urxvt -name mus -e cmus
+exec --no-startup-id st -n mus -e cmus
 
     # Move the currently focused window to the cratchpad
 

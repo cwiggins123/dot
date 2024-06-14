@@ -42,4 +42,4 @@ case $forecast in
     ;;
 
 esac
-echo " $icon $fullString "
+echo " $icon$fullString"
