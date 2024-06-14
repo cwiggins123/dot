@@ -136,6 +136,8 @@ endfun
 "autocmd FileType perl autocmd BufWritePre <buffer> call s:Perltidy()
 endif
 
+autocmd BufWritePost config.def.h,config.h !sudo make install 
+
 " format shell on save
 if has("eval") " vim-tiny detection
 " TODO check for shfmt and shellcheck before defining

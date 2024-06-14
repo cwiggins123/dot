@@ -215,7 +215,7 @@ bindsym $mod+Shift+s exec scrot
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    font pango:3270 Nerd Font 22 
+    font pango:3270 Nerd Font 18 
     position top 
     status_command i3blocks
 }

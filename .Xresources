@@ -1,12 +1,12 @@
 *.scrollBar: false
-*.faceName: 3270 Nerd Font:size=26
+*.faceName: 3270 Nerd Font:size=20
 
 !! urxvt
 ! fonts
-URxvt.font: xft:3270 Nerd Font:style=Regular:size=26:antialias=yes
-URxvt.boldFont: xft:3270 Nerd Font:style=Bold:size=26:antialias=yes
-URxvt.italicFont: xft:3270 Nerd Font:style=Italic:size=26:antialias=yes
-URxvt.boldItalicFont: xft:3270 Nerd Font:style=Bold Italic:size=26:antialias=yes
+URxvt.font: xft:3270 Nerd Font:style=Regular:size=22:antialias=yes
+URxvt.boldFont: xft:3270 Nerd Font:style=Bold:size=22:antialias=yes
+URxvt.italicFont: xft:3270 Nerd Font:style=Italic:size=22:antialias=yes
+URxvt.boldItalicFont: xft:3270 Nerd Font:style=Bold Italic:size=22:antialias=yes
 
 ! basic settings
 URxvt.letterspace: 0
