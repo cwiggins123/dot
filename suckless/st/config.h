@@ -6,7 +6,7 @@ char *externalpipe_sigusr1[] = {"/bin/sh", "-c", "externalpipe_buffer.sh st_stri
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "BlexMono Nerd Font:pixelsize=26:antialias=true:autohint=true";
+static char *font = "Liga SFMono Nerd Font:pixelsize=22:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -106,49 +106,35 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-/* bg opacity */
-float alpha = 0.75;
-
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  /* 3028
-  "#000000",
-  "#db2d20",
-  "#01a252",
-  "#fded02",
-  "#01a0e4",
-  "#a16a94",
-  "#b5e4f4",
-  "#a5a2a2",
-  "#5c5855",
-  "#db2d20",
-  "#01a252",
-  "#fded02",
-  "#01a0e4",
-  "#a16a94",
-  "#b5e4f4",
-  "#f7f7f7",
-  */
-	/* carbon dark */
-	"#161616",  /*  0: black    */
-	"#fa4d56",  /*  1: red      */
-	"#24a148",  /*  2: green    */
-	"#b28600",  /*  3: yellow   */
-	"#4589ff",  /*  4: blue     */
-	"#a56eff",  /*  5: magenta  */
-	"#1192e8",  /*  6: cyan     */
-	"#a8a8a8",  /*  7: white    */
-	"#525252",  /*  8: brblack  */
-	"#ff832b",  /*  9: orange    */
-	"#42be65",  /* 10: brgreen  */
-	"#f1c21b",  /* 11: bryellow */
-	"#78a9ff",  /* 12: brblue   */
-	"#ff7eb6",  /* 13: brmagenta*/
-	"#42be65",  /* 14: brcyan   */
-	"#ffffff",  /* 15: brwhite  */
+	/* 8 normal colors */
+	"black",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"cyan3",
+	"gray90",
+
+	/* 8 bright colors */
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
+	"white",
 
 	[255] = 0,
 
+	/* more colors can be added after 255 to use with DefaultXX */
+	"#cccccc",
+	"#555555",
+	"gray90", /* default foreground colour */
+	"black", /* default background colour */
 };
 
 
@@ -156,10 +142,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 15;
-unsigned int defaultbg = 0;
-unsigned int defaultcs = 14;
-static unsigned int defaultrcs = 15;
+unsigned int defaultfg = 258;
+unsigned int defaultbg = 259;
+unsigned int defaultcs = 256;
+static unsigned int defaultrcs = 257;
 
 /*
  * https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-q.1D81

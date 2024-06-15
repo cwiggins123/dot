@@ -1,3 +1,4 @@
+char *externalpipe_sigusr1[] = {"/bin/sh", "-c", "externalpipe_buffer.sh st_strings_read"};
 /* See LICENSE file for copyright and license details. */
 
 /*
@@ -5,7 +6,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "3270 Nerd Font :pixelsize=30:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -68,6 +69,18 @@ static unsigned int blinktimeout = 800;
 static unsigned int cursorthickness = 2;
 
 /*
+ * 1: render most of the lines/blocks characters without using the font for
+ *    perfect alignment between cells (U2500 - U259F except dashes/diagonals).
+ *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
+ * 0: disable (render all U25XX glyphs normally from the font).
+ */
+const int boxdraw = 0;
+const int boxdraw_bold = 0;
+
+/* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
+const int boxdraw_braille = 0;
+
+/*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
  * it
  */
@@ -96,32 +109,32 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#000000",
-	"#db2d20",
-	"#01a252",
-	"#fded02",
-	"#01a0e4",
-	"#a16a94",
-	"#b5e4f4",
-	"#a5a2a2",
+	"black",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"cyan3",
+	"gray90",
 
 	/* 8 bright colors */
-	"#5c5855",
-	"#db2d20",
-	"#01a252",
-	"#fded02",
-	"#01a0e4",
-	"#a16a94",
-	"#b5e4f4",
-	"#f7f7f7",
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
+	"white",
 
 	[255] = 0,
-#
+
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc", /* cursor color*/
-	"#555555", /* cursor color*/
-	"#f7f7f7", /* default foreground colour */
-	"#000000", /* default background colour */
+	"#cccccc",
+	"#555555",
+	"gray90", /* default foreground colour */
+	"black", /* default background colour */
 };
 
 
