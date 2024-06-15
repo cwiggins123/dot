@@ -47,7 +47,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   
   syntax on
   set background=dark
-  colorscheme base16-3024
+  colorscheme oxocarbon
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 else
