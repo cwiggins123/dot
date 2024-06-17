@@ -1,6 +1,10 @@
 ### Autostart
 exec --no-startup-id !(pidof pipewire) && gentoo-pipewire-launcher 
 exec --no-startup-id unclutter
+exec --no-startup-id picom
+exec --no-startup-id redshift -l 30:-92
+exec xrandr --rate 144.00 
+exec xwallpaper --zoom $HOME/Pictures/server1.jpg
 
 ### Variables
 #
@@ -12,7 +16,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term st
+set $term wezterm
 # Your preferred application launcher
 set $menu dmenu_run -fn "Liga SFMono Nerd Font:size=21"
 
@@ -215,7 +219,7 @@ bindsym $mod+Shift+s exec scrot
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    font pango:Liga SFMono Nerd Font 18 
+    font pango:Liga SFMono Nerd Font 16 
     position top 
     status_command i3blocks
 }
