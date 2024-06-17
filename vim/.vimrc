@@ -9,6 +9,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'airblade/vim-gitgutter'
   Plug 'dense-analysis/ale'
+  Plug 'altercation/vim-colors-solarized'
   call plug#end()
 
   let g:ale_sign_error = '☠'
@@ -47,7 +48,8 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   
   syntax on
   set background=dark
-  colorscheme base16-3024
+  let g:solarized_termcolors=256
+  colorscheme solarized
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
 else
@@ -97,7 +99,7 @@ endif
 " colors "
 """"""""""
 if has("termguicolors")
-  set termguicolors
+"  set termguicolors
 endif
 
 " more misc stuff "
