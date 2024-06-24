@@ -2,8 +2,7 @@ local wezterm = require("wezterm")
 local config = {}
 
 if wezterm.config_builder then config = wezterm.config_builder() end
-
-config.color_scheme = "Solarized Dark (Gogh)"
+config.color_scheme = "Oxocarbon Dark (Gogh)"
 config.font = wezterm.font_with_fallback({
   { family = "Liga SFMono Nerd Font", scale = 1.5 },
   { family = "Monospace", scale = 1.5 },

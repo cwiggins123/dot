@@ -1,12 +1,12 @@
 *.scrollBar: false
-*.faceName: 3270 Nerd Font:size=20
+*.faceName: Liga SFMono Nerd Font:size=20
 
 !! urxvt
 ! fonts
-URxvt.font: xft:3270 Nerd Font:style=Regular:size=22:antialias=yes
-URxvt.boldFont: xft:3270 Nerd Font:style=Bold:size=22:antialias=yes
-URxvt.italicFont: xft:3270 Nerd Font:style=Italic:size=22:antialias=yes
-URxvt.boldItalicFont: xft:3270 Nerd Font:style=Bold Italic:size=22:antialias=yes
+URxvt.font: xft:Liga SFMono Nerd Font:style=Regular:size=18:antialias=yes
+URxvt.boldFont: xft:Liga SFMono Nerd Font:style=Bold:size=18:antialias=yes
+URxvt.italicFont: xft:Liga SFMono Nerd Font:=Italic:size=18:antialias=yes
+URxvt.boldItalicFont: xft:Liga SFMono Nerd Font:style=Bold Italic:size=18:antialias=yes
 
 ! basic settings
 URxvt.letterspace: 0
@@ -17,7 +17,7 @@ URxvt.cursorUnderline: false
 URvxt.saveline: 2048
 URxvt.urgentOnBell: true
 URxvt.depth: 24
-URxvt.geometry: 80x420+0+0
+!URxvt.geometry: 20x500+0+0
 
 ! perls
 ! most of this is replaced by tmux, but is still here as a fallback
@@ -37,34 +37,5 @@ URxvt.tabbed.tab-bg: 0
 URxvt.urlLauncher: firefox
 URxvt.underlineURLs:true
 URxvt.urlButton: 1
-
-!! 3024 from base16
-*background:  #000000
-*foreground:  #a5a2a2
-*cursorColor: #01a252 
-*scrollColor: #a5a2a2
-
-!        black
-*color0:      #000000
-*color8:      #5c5855
-!        red
-*color1:      #db2d20
-*color9:      #db2d20
-!        green
-*color2:      #01a252 
-*color10:     #01a252
-!        yellow
-*color3:      #fded02
-*color11:     #fded02
-!        blue
-*color4:      #01a0e4
-*color12:     #01a0e4
-!        magenta
-*color5:      #a16a94
-*color13:     #a16a94
-!        cyan
-*color6:      #b5e4f4
-*color14:     #b5e4f4
-!        white
-*color7:      #a5a2a2
-*color15:     #f7f7f7 
+URxvt.background:black
+URxvt.foreground:gray

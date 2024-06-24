@@ -10,7 +10,7 @@ ln -sf "$PWD/.Xresources" "$HOME/.Xresources"
 ln -sd "$PWD/.irssi" "$HOME/"
 ln -sd "$PWD/bin" "$HOME/.local/"
 
-for i in vim lynx git tmux docker podman ; do
+for i in vim wezterm lynx git tmux docker podman ; do
   cd $i && ./setup
   cd -
 done

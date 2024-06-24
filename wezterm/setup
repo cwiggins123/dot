@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm -rf "$HOME"/.config/wezterm/
+mkdir "$HOME"/.config/wezterm/
+ln -sf ./wezterm.lua "$HOME"/.config/wezterm/wezterm.lua

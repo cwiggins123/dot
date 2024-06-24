@@ -9,11 +9,10 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'airblade/vim-gitgutter'
   Plug 'dense-analysis/ale'
-  Plug 'altercation/vim-colors-solarized'
   call plug#end()
 
-  let g:ale_sign_error = '☠'
-  let g:ale_sign_warning = '🙄'
+  let g:ale_sign_error = 'X'
+  let g:ale_sign_warning = '!'
   let g:ale_linters = {'go': ['gometalinter', 'gofmt','gobuild']}
 
   " pandoc
@@ -48,10 +47,10 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   
   syntax on
   set background=dark
-  let g:solarized_termcolors=256
-  colorscheme solarized
+  colorscheme oxocarbon
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guibg=NONE ctermbg=NONE
+  hi StatusLine guibg=NONE ctermbg=NONE
 else
   autocmd vimleavepre *.go !gofmt -w % " backup if fatih fails
 
@@ -60,6 +59,7 @@ else
     set background=dark
     hi Normal guibg=NONE ctermbg=NONE
     hi LineNr guibg=NONE ctermbg=NONE
+    hi StatusLine guibg=NONE ctermbg=NONE
   endif
 endif
 
@@ -99,7 +99,7 @@ endif
 " colors "
 """"""""""
 if has("termguicolors")
-"  set termguicolors
+  set termguicolors
 endif
 
 " more misc stuff "
