@@ -4,28 +4,23 @@
 # and its website describes the configuration:
 #
 #     https://vivien.github.io/i3blocks
-
 # Global properties
-full_text= | 
-align=center
-color=#ffffff
-separator=false
-separator_block_width=0
-markup=pango
+separator_block_width=15
 
-#[window]
-#command=$HOME/.local/bin/window
-#interval=1
-#color=#ffffff
-
-#[separator]
+[cmus]
+command=$HOME/.local/bin/cmus
+#markup=pango
+interval=1
 
 [volume]
 command=$HOME/.local/bin/volume
 interval=1
 color=#ffffff
 
-[separator]
+[firewall]
+command=$HOME/.local/bin/firewall
+label=🛡️
+interval=10
 
 [temperature]
 command=$HOME/.local/bin/temp
@@ -38,27 +33,12 @@ SENSOR_CHIP=k10temp-pci-00c3
 [cpu]
 command=$HOME/.local/bin/cpu_usage
 interval=1
-LABEL=   
+LABEL=  
 #T_WARN=50
 #T_WARN=80
 DECIMALS=2
 
-#[bitcoin]
-#command=echo $($HOME/.local/bin/price btc Bitcoin  24)
-#interval=3600
-#color=#ff6f00
-
-[separator]
-
-[weather]
-#command=curl -Ss 'https://wttr.in?O&T&Q' | cut -c 16- | head -2 | xargs echo
-command=weather
-interval=3600
-color=#A4c2F4
-
-[separator]
-
 [time]
-command=~/.local/bin/clock
+command=date "+%D %H:%M:%S"
 color=#ffffff
 interval=60

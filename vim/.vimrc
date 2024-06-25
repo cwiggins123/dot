@@ -45,17 +45,17 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   au FileType go nmap <leader>m ilog.Print("made")<CR><ESC>
   au FileType go nmap <leader>n iif err != nil {return err}<CR><ESC>
   
-  syntax on
+  syntax off 
   set background=dark
-  colorscheme base16-3024 
+  "colorscheme base16-3024
   hi Normal guibg=NONE ctermbg=NONE
-  hi LineNr guibg=NONE ctermbg=NONE
-  hi StatusLine guibg=NONE ctermbg=NONE
+  hi LineNr guifg=NONE guibg=NONE ctermbg=NONE
+  hi StatusLine guifg=NONE guibg=NONE ctermbg=NONE
 else
   autocmd vimleavepre *.go !gofmt -w % " backup if fatih fails
 
   if has("syntax")
-    syntax on
+    syntax off
     set background=dark
     hi Normal guibg=NONE ctermbg=NONE
     hi LineNr guibg=NONE ctermbg=NONE
