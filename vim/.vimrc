@@ -47,7 +47,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   
   syntax off 
   set background=dark
-  "colorscheme base16-3024
+  "colorscheme everforest
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guifg=NONE guibg=NONE ctermbg=NONE
   hi StatusLine guifg=NONE guibg=NONE ctermbg=NONE
@@ -55,7 +55,7 @@ else
   autocmd vimleavepre *.go !gofmt -w % " backup if fatih fails
 
   if has("syntax")
-    syntax off
+    syntax on
     set background=dark
     hi Normal guibg=NONE ctermbg=NONE
     hi LineNr guibg=NONE ctermbg=NONE

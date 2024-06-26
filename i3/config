@@ -1,7 +1,7 @@
 ### Autostart
 exec --no-startup-id gentoo-pipewire-launcher 
 exec xrdb $HOME/.Xresources
-exec --no-startup-id xwallpaper --zoom $HOME/Pictures/mono5.jpg
+exec --no-startup-id xwallpaper --zoom $HOME/Pictures/mono6.jpg
 exec --no-startup-id unclutter
 exec --no-startup-id redshift -l 30:-92
 exec --no-startup-id xrandr --rate 144.00 
@@ -18,7 +18,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term wezterm 
+set $term urxvt 
 
 # Your preferred application launcher
 #set $menu dmenu_run -fn "Liga SFMono Nerd Font:size=18"
