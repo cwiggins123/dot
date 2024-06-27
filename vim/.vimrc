@@ -45,9 +45,9 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   au FileType go nmap <leader>m ilog.Print("made")<CR><ESC>
   au FileType go nmap <leader>n iif err != nil {return err}<CR><ESC>
   
-  syntax off 
+  syntax on
   set background=dark
-  "colorscheme everforest
+  colorscheme desert
   hi Normal guibg=NONE ctermbg=NONE
   hi LineNr guifg=NONE guibg=NONE ctermbg=NONE
   hi StatusLine guifg=NONE guibg=NONE ctermbg=NONE
@@ -57,6 +57,7 @@ else
   if has("syntax")
     syntax on
     set background=dark
+    colorscheme desert
     hi Normal guibg=NONE ctermbg=NONE
     hi LineNr guibg=NONE ctermbg=NONE
     hi StatusLine guibg=NONE ctermbg=NONE
