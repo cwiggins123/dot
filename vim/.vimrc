@@ -47,20 +47,13 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   
   syntax on
   set background=dark
-  colorscheme desert
-  hi Normal guibg=NONE ctermbg=NONE
-  hi LineNr guifg=NONE guibg=NONE ctermbg=NONE
-  hi StatusLine guifg=NONE guibg=NONE ctermbg=NONE
+  colorscheme wildcharm
 else
   autocmd vimleavepre *.go !gofmt -w % " backup if fatih fails
-
   if has("syntax")
     syntax on
+    colorscheme wildcharm
     set background=dark
-    colorscheme desert
-    hi Normal guibg=NONE ctermbg=NONE
-    hi LineNr guibg=NONE ctermbg=NONE
-    hi StatusLine guibg=NONE ctermbg=NONE
   endif
 endif
 

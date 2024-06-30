@@ -1,12 +1,19 @@
 *.scrollBar: false
 *.faceName: Liga SFMono Nerd Font:size=20
+*.background: black
+*.foreground: grey
 
 !! urxvt
 ! fonts
-URxvt.font: xft:Liga SFMono Nerd Font:style=Regular:size=18:antialias=yes
-URxvt.boldFont: xft:Liga SFMono Nerd Font:style=Bold:size=18:antialias=yes
-URxvt.italicFont: xft:Liga SFMono Nerd Font:=Italic:size=18:antialias=yes
-URxvt.boldItalicFont: xft:Liga SFMono Nerd Font:style=Bold Italic:size=18:antialias=yes
+!URxvt.font: xft:Liga SFMono Nerd Font:style=Regular:size=18:antialias=yes
+!URxvt.boldFont: xft:Liga SFMono Nerd Font:style=Bold:size=18:antialias=yes
+!URxvt.italicFont: xft:Liga SFMono Nerd Font:=Italic:size=18:antialias=yes
+!URxvt.boldItalicFont: xft:Liga SFMono Nerd Font:style=Bold Italic:size=18:antialias=yes
+
+URxvt.font: xft:monospace:style=Regular:size=18:antialias=yes
+URxvt.boldFont: xft:monospace:style=Bold:size=18:antialias=yes
+URxvt.italicFont: xft:monospace:=Italic:size=18:antialias=yes
+URxvt.boldItalicFont: xft:monospace:style=Bold Italic:size=18:antialias=yes
 
 ! basic settings
 URxvt.letterspace: 0
@@ -38,39 +45,6 @@ URxvt.urlLauncher: firefox
 URxvt.underlineURLs:true
 URxvt.urlButton: 1
 
-! special 
-*.foreground:   #868690
-*.background:   #0f1014
-*.cursorColor:  #7c829d
-
-! black 
-*.color0:       #131317
-*.color8:       #575861
-
-! red 
-*.color1:       #999eb2
-*.color9:       #999eb2
-
-! green 
-*.color2:       #626983
-*.color10:      #626983
-
-! yellow 
-*.color3:       #d3d5de
-*.color11:      #d3d5de
-
-! blue 
-*.color4:       #7c829d
-*.color12:      #7c829d
-
-! magenta 
-*.color5:       #e2e4ed
-*.color13:      #e2e4ed
-
-! cyan 
-*.color6:       #b6bac8
-*.color14:      #b6bac8
-
-! white 
-*.color7:       #868690
-*.color15:      #868690
+! color tweakz
+*.color4: #01a0e4
+*.color12: #1eb9fc
