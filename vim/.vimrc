@@ -9,6 +9,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'airblade/vim-gitgutter'
   Plug 'dense-analysis/ale'
+  Plug 'sonph/onehalf', {'rtp': 'vim/'}
   call plug#end()
 
   let g:ale_sign_error = 'X'
@@ -47,13 +48,21 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   
   syntax on
   set background=dark
-  colorscheme wildcharm
+  colorscheme onehalfdark
+  hi Normal ctermbg=NONE guibg=NONE
+  hi LineNr ctermbg=NONE guibg=NONE
+  hi clear SignColumn
+  hi Comment ctermbg=NONE guibg=NONE
 else
   autocmd vimleavepre *.go !gofmt -w % " backup if fatih fails
   if has("syntax")
     syntax on
-    colorscheme wildcharm
     set background=dark
+    colorscheme default 
+    hi Normal ctermbg=NONE guibg=NONE
+    hi LineNr ctermbg=NONE guibg=NONE
+    hi clear SignColumn
+    hi Comment ctermbg=NONE guibg=NONE
   endif
 endif
 

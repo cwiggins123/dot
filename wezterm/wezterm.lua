@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local config = {}
 
 if wezterm.config_builder then config = wezterm.config_builder() end
-config.color_scheme = "3024 (base16)"
+config.color_scheme = 'OneHalfDark'
 config.font = wezterm.font_with_fallback({
   { family = "Liga SFMono Nerd Font", scale = 1.5 },
   { family = "Font Awesome 6 Free", scale = 1.5 },
@@ -10,7 +10,7 @@ config.font = wezterm.font_with_fallback({
 })
 
 config.window_background_opacity = 0.85
-config.window_decorations = "RESIZE"
+config.window_decorations = "TITLE | RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "Home"

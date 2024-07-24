@@ -4,6 +4,9 @@ exec --no-startup-id xrdb $HOME/.Xresources
 exec --no-startup-id unclutter
 exec --no-startup-id redshift -l 30:-92
 exec --no-startup-id xrandr --rate 144.00 
+exec --no-startup-id i3blocks
+exec --no-startup-id xcompmgr
+exec --no-startup-id xwallpaper --zoom ~/Pictures/server2.jpg
 
 ### Variables
 #
@@ -21,15 +24,15 @@ set $term wezterm
 
 # Your preferred application launcher
 #set $menu dmenu_run -fn "Liga SFMono Nerd Font:size=18"
-set $menu dmenu_run -nf '#BBBBBB' -nb '#000000' -sb '#7C829D' -sf '#0F1014' -fn "Liga SFMono Nerd Font:size=18"
+set $menu dmenu_run
 
 ### font stuff
-font pango:Liga SFMono Nerd Font 0
+font pango:monospace 12
 
 ### Titlebar
-#title_align center
-default_border pixel 3
-default_floating_border pixel 3
+title_align center
+#default_border pixel 3
+#default_floating_border pixel 3
 
 ### Key bindings
 #
@@ -201,7 +204,7 @@ bindsym $mod+Shift+s exec scrot
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    font pango:Liga SFMono Nerd 16
+    font pango:monospace 16
     position top 
     status_command i3blocks
 }

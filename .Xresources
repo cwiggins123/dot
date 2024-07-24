@@ -1,19 +1,14 @@
 *.scrollBar: false
-*.faceName: Liga SFMono Nerd Font:size=20
-*.background: black
+*.faceName: monospace:size=18
+!!*.background: black
 *.foreground: grey
 
 !! urxvt
 ! fonts
-!URxvt.font: xft:Liga SFMono Nerd Font:style=Regular:size=18:antialias=yes
-!URxvt.boldFont: xft:Liga SFMono Nerd Font:style=Bold:size=18:antialias=yes
-!URxvt.italicFont: xft:Liga SFMono Nerd Font:=Italic:size=18:antialias=yes
-!URxvt.boldItalicFont: xft:Liga SFMono Nerd Font:style=Bold Italic:size=18:antialias=yes
-
 URxvt.font: xft:monospace:style=Regular:size=18:antialias=yes
 URxvt.boldFont: xft:monospace:style=Bold:size=18:antialias=yes
-URxvt.italicFont: xft:monospace:=Italic:size=18:antialias=yes
-URxvt.boldItalicFont: xft:monospace:style=Bold Italic:size=18:antialias=yes
+URxvt.italicFont: xft:artwiz lime:=Italic:size=18:antialias=yes
+URxvt.boldItalicFont: xft:artwiz lime:style=Bold Italic:size=18:antialias=yes
 
 ! basic settings
 URxvt.letterspace: 0
@@ -23,7 +18,7 @@ URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
 URvxt.saveline: 2048
 URxvt.urgentOnBell: true
-URxvt.depth: 24
+URxvt.depth: 32
 !URxvt.geometry: 20x500+0+0
 
 ! perls
@@ -37,14 +32,27 @@ URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.keysym.M-u: perl:url-select:select_next
-!URxvt.tabbed.tabbar-fg: 2
-!URxvt.tabbed.tabbar-bg: 0
-!URxvt.tabbed.tab-fg: 3
-!URxvt.tabbed.tab-bg: 0
 URxvt.urlLauncher: firefox
 URxvt.underlineURLs:true
 URxvt.urlButton: 1
+URxvt.background: [85]#000000
 
-! color tweakz
-*.color4: #01a0e4
-*.color12: #1eb9fc
+!! Apprentice colors
+*.foreground: #BCBCBC
+*.background: #262626
+*.color0:     #1C1C1C
+*.color8:     #444444
+*.color1:     #AF5F5F
+*.color9:     #FF8700
+*.color2:     #5F875F
+*.color10:    #87AF87
+*.color3:     #87875F
+*.color11:    #FFFFAF
+*.color4:     #5F87AF
+*.color12:    #8FAFD7
+*.color5:     #5F5F87
+*.color13:    #8787AF
+*.color6:     #5F8787
+*.color14:    #5FAFAF
+*.color7:     #6C6C6C
+*.color15:    #FFFFFF
