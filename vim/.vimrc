@@ -47,7 +47,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   
   syntax on
   set background=dark
-  colorscheme retrobox
+  
   hi Normal ctermbg=NONE guibg=NONE
   hi LineNr ctermbg=NONE guibg=NONE
   hi clear SignColumn
@@ -57,7 +57,6 @@ else
   if has("syntax")
     syntax on
     set background=dark
-    colorscheme desert 
     hi Normal ctermbg=NONE guibg=NONE
     hi LineNr ctermbg=NONE guibg=NONE
     hi clear SignColumn
