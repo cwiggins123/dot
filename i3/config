@@ -6,7 +6,7 @@ exec --no-startup-id redshift -l 30:-92
 exec --no-startup-id xrandr --rate 144.00 
 exec --no-startup-id i3blocks
 exec --no-startup-id xcompmgr
-exec --no-startup-id xwallpaper --zoom ~/Pictures/server2.jpg
+exec --no-startup-id xwallpaper --zoom ~/Pictures/desert4.jpg
 
 ### Variables
 #

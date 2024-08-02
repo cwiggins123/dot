@@ -9,7 +9,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'airblade/vim-gitgutter'
   Plug 'dense-analysis/ale'
-  Plug 'sonph/onehalf', {'rtp': 'vim/'}
   call plug#end()
 
   let g:ale_sign_error = 'X'
@@ -48,7 +47,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
   
   syntax on
   set background=dark
-  colorscheme onehalfdark
+  colorscheme retrobox
   hi Normal ctermbg=NONE guibg=NONE
   hi LineNr ctermbg=NONE guibg=NONE
   hi clear SignColumn
@@ -58,7 +57,7 @@ else
   if has("syntax")
     syntax on
     set background=dark
-    colorscheme default 
+    colorscheme desert 
     hi Normal ctermbg=NONE guibg=NONE
     hi LineNr ctermbg=NONE guibg=NONE
     hi clear SignColumn
