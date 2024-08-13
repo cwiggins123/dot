@@ -65,7 +65,12 @@ export LESS_TERMCAP_so="[34m" # blue
 export LESS_TERMCAP_ue="" # "0m"
 export LESS_TERMCAP_us="[4m"  # underline
 
-export twitter="Elon Musk" 
+# IRC vars
+export IRCNICK="TGG"
+export IRCSERVER="irc.libera.chat"
+
+# specifically for my desktop. Will find a better way to do this later
+export SENSOR_CHIP="k10temp-pci-00c3"
 # clear screen
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'

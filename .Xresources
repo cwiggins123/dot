@@ -1,14 +1,14 @@
 *.scrollBar: false
-*.faceName: monospace:size=18
-!!*.background: black
+*.faceName: Hack:style=Regular:size=18:antialias=yes
+*.background: black
 *.foreground: grey
 
 !! urxvt
 ! fonts
-URxvt.font: xft:monospace:style=Regular:size=18:antialias=yes
-URxvt.boldFont: xft:monospace:style=Bold:size=18:antialias=yes
-URxvt.italicFont: xft:artwiz lime:=Italic:size=18:antialias=yes
-URxvt.boldItalicFont: xft:artwiz lime:style=Bold Italic:size=18:antialias=yes
+URxvt.font: xft:Hack:style=Regular:size=16:antialias=yes
+URxvt.boldFont: xft:Hack:style=Bold:size=16:antialias=yes
+URxvt.italicFont: xft:Hack:style=Italic:size=16:antialias=yes
+URxvt.boldItalicFont: xft:Hack:style=Bold Italic:size=16:antialias=yes
 
 ! basic settings
 URxvt.letterspace: 0
@@ -35,24 +35,4 @@ URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.urlLauncher: firefox
 URxvt.underlineURLs:true
 URxvt.urlButton: 1
-URxvt.background: [85]#000000
-
-!! Apprentice colors
-*.foreground: #BCBCBC
-*.background: #262626
-*.color0:     #1C1C1C
-*.color8:     #444444
-*.color1:     #AF5F5F
-*.color9:     #FF8700
-*.color2:     #5F875F
-*.color10:    #87AF87
-*.color3:     #87875F
-*.color11:    #FFFFAF
-*.color4:     #5F87AF
-*.color12:    #8FAFD7
-*.color5:     #5F5F87
-*.color13:    #8787AF
-*.color6:     #5F8787
-*.color14:    #5FAFAF
-*.color7:     #6C6C6C
-*.color15:    #FFFFFF
+URxvt.background: [85]black
