@@ -1,0 +1,81 @@
+#
+## Menu generated with fbmenugen v0.88
+#
+
+[begin] (Fluxbox)
+[encoding] {UTF-8}
+  [exec] (File Manager) {xdg-open .}
+  [exec] (Terminal) {urxvt}
+  [exec] (Web Browser) {xdg-open http://}
+  [exec] (Run command) {fbrun}
+[separator]
+[submenu] (Accessories)
+  [exec] (KeePassXC) {keepassxc}
+  [exec] (Vim) {urxvt -e 'vim'}
+[end]
+[submenu] (Games)
+  [exec] (Minecraft) {minecraft-launcher}
+  [exec] (Steam) {/usr/bin/steam}
+[end]
+[submenu] (Multimedia)
+  [exec] (mpv Media Player) {mpv --player-operation-mode=pseudo-gui --}
+[end]
+[submenu] (Network)
+  [exec] (Discord) {/usr/bin/perl -e 'chdir($ARGV[0]) && exec($ARGV[1])' \/usr\/bin \/usr\/bin\/discord}
+  [exec] (Mozilla Firefox) {firefox}
+  [exec] (Remmina) {remmina-file-wrapper}
+  [exec] (Steam) {/usr/bin/steam}
+[end]
+[submenu] (Office)
+  [exec] (Zathura) {zathura}
+[end]
+[submenu] (System)
+  [exec] (btop++) {urxvt -e 'btop'}
+  [exec] (Htop) {urxvt -e 'htop'}
+  [exec] (Manage Printing) {/usr/bin/xdg-open http://localhost:631/}
+  [exec] (rxvt-unicode) {urxvt}
+  [exec] (UXTerm) {uxterm}
+  [exec] (XTerm) {xterm}
+[end]
+[separator]
+[submenu] (Advanced Settings)
+  [exec] (Conky RC) {geany ~/.conkyrc}
+  [exec] (Tint2 Panel) {geany ~/.config/tint2/tint2rc}
+[submenu] (Fbmenugen)
+  [exec] (Menu Schema) {geany ~/.config/fbmenugen/schema.pl}
+  [exec] (Menu Config) {geany ~/.config/fbmenugen/config.pl}
+[separator]
+  [exec] (Generate a menu with icons) {fbmenugen -i}
+  [exec] (Generate a menu without icons) {fbmenugen -g}
+[separator]
+  [exec] (Refresh cache) {fbmenugen -d}
+[end]
+[submenu] (Fluxbox)
+[config] (Configure)
+[submenu] (System Styles) {Choose a style...}
+  [stylesdir] (/usr/share/fluxbox/styles)
+[end]
+[submenu] (User Styles) {Choose a style...}
+  [stylesdir] (~/.fluxbox/styles)
+[end]
+[workspaces] (Workspace List)
+[submenu] (Tools)
+  [exec] (Screenshot - JPG) {import screenshot.jpg && display -resize 50% screenshot.jpg}
+  [exec] (Screenshot - PNG) {import screenshot.png && display -resize 50% screenshot.png}
+  [exec] (Run) {fbrun}
+  [exec] (Regen Menu) {fluxbox-generate_menu}
+[end]
+[commanddialog] (Fluxbox Command)
+  [reconfig] (Reload config)
+  [restart] (Restart)
+  [exec] (About) {(fluxbox -v; fluxbox -info | sed 1d) | xmessage -file - -center}
+  [separator]
+  [exit] (Exit)
+[end]
+[end]
+[separator]
+  [exec] (Refresh) {/usr/bin/perl \/home\/christopher\/\.config\/fbmenugen\/fbmenugen -S \/home\/christopher\/\.config\/fbmenugen\/schema\.pl -C \/home\/christopher\/\.config\/fbmenugen\/config\.pl -o \/home\/christopher\/\.fluxbox\/menu}
+[exit] (Exit)
+
+[endencoding]
+[end]
